@@ -1,0 +1,9 @@
+- if @rooms.any?
+  = paginate @rooms
+  br
+  ul
+    - @rooms.each do |room|
+      li
+        = link_to room.name, room_path(room)
+  br
+  = paginate @rooms
