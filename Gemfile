@@ -44,4 +44,5 @@ group :test do
 end
 
 gem 'dotenv-rails'
+gem 'bcrypt'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

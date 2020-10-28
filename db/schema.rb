@@ -12,7 +12,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_190_609_191_223) do
+ActiveRecord::Schema.define(version: 2020_10_28_040816) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension 'pgcrypto'
   enable_extension 'plpgsql'
@@ -21,6 +22,7 @@ ActiveRecord::Schema.define(version: 20_190_609_191_223) do
     t.string 'name', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
+    t.string 'password_digest'
   end
 
   create_table 'topics', id: :uuid, default: -> { 'gen_random_uuid()' }, force: :cascade do |t|
