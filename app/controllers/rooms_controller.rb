@@ -5,6 +5,7 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.page(params[:page])
+    render layout: 'admin'
   end
 
   def show; end

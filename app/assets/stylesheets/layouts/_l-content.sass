@@ -1,0 +1,13 @@
+.l-content
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  +mq($from: mobile, $until: desktop)
+    padding: 2rem 1rem
+  +mq($from: desktop)
+    padding: 10vh 1rem 20vh
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+    max-height: 100vh
+    width: 100%

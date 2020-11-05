@@ -1,57 +1,75 @@
 .a-button
-  display: flex
-  align-items: center
-  justify-content: center
-  text-decoration: none
-  font-weight: 800
-  color: $default-text
-  padding: 0 2em
-  border-radius: .25em
-  cursor: pointer
-  white-space: nowrap
-  height: 2.75em
-  transition: all .4s ease-out
-  background-color: $yellow
-  background-image: linear-gradient(#fbc73b, #b77411)
-  border-style: solid
-  border-width: 1px
-  border-color: #ffdf89 #d6a521 #945d0c
-  box-shadow: rgba(black, .25) 0 .125rem .5rem 0.125em, rgba(white, .25) 0 0 .25rem 1px inset
-  text-shadow: rgba(white, .7) 0 1px 2px
-  +mq($from: mobile, $until: desktop)
-    font-size: 1.25rem
-    min-width: 100%
-  +mq($from: desktop)
-    font-size: 2rem
-    min-width: 14em
-  &:hover
-    color: #2d2d33
-    border-color: #fbdf98 #eccf7e #c79953
-    background-color: $yellow
-    box-shadow: rgba(white, .5) 0 0 1rem 0.125em, rgba(white, .5) 0 0 .5rem 1px inset
-    text-shadow: rgba(white, .7) 0 1px 4px
-  &:active
-    color: #2d2d33
-    border-color: #563508 #90620d #ffcd52
-    background-image: linear-gradient(#b77411, #fbc73b)
-    background-color: $yellow
-    box-shadow: rgba(white, .3) 0 2px 0px 0px, rgba(black, .5) 0 4px 8px inset, rgba(black, .2) 0 -4px 8px
-    text-shadow: rgba(white, .7) 0 1px 4px
-    color: #9a291f
-  &.is-disabled
-    color: #2d2d33
-    border-color: #b9b9b9
-    background-image: none
-    background-color: #b9b9b9
-    box-shadow: none
-    text-shadow: rgba(white, .7) 0 1px 1px
-    color: #888
-    pointer-events: none
+  +button-base
+
+  // color
+  &.is-primary
+    +button-color($primary)
+  &.is-secondary
+    +button-color($secondary)
+  &.is-info
+    +button-color($info)
+  &.is-success
+    +button-color($success)
+  &.is-warning
+    +button-color($warning)
   &.is-danger
-    background-color: #de493a
-    background-image: linear-gradient(#fb5454, #9a2b12)
-    border-color: #f18381 #c55d53 #9a291f
-    color: $reversal-text
-    text-shadow: rgba(black, .5) 0 -1px 2px
-    &:hover
-      text-shadow: rgba(black, .5) 0 -1px 4px
+    +button-color($danger)
+  &.is-disabled
+    +button-color($disabled)
+    pointer-events: none
+
+  // border-color
+  &.is-border-primary
+    +button-border-color($primary)
+  &.is-border-secondary
+    +button-border-color($muted-text)
+  &.is-border-info
+    +button-border-color($info)
+  &.is-border-success
+    +button-border-color($success)
+  &.is-border-warning
+    +button-border-color($warning)
+  &.is-border-danger
+    +button-border-color($danger)
+  &.is-border-disabled
+    +button-border-color($disabled)
+    pointer-events: none
+
+  // 3d-color
+  &.is-3d-primary
+    +button-3d-color($primary)
+  &.is-3d-secondary
+    +button-3d-color($secondary)
+  &.is-3d-info
+    +button-3d-color($info)
+  &.is-3d-success
+    +button-3d-color($success)
+  &.is-3d-warning
+    +button-3d-color($warning)
+  &.is-3d-danger
+    +button-3d-color($danger)
+  &.is-3d-disabled
+    +button-3d-color($disabled)
+    pointer-events: none
+
+  //size
+  &.is-xs
+    +button-size(fz(1), 1, 2em)
+    font-weight: 600
+  &.is-sm
+    +button-size(fz(2), 1.25, .6875)
+    font-weight: 600
+  &.is-md
+    +button-size(fz(3), 1, 2.75rem)
+    font-weight: 600
+  &.is-lg
+    +button-size(fz(5), 1, .4)
+    font-weight: 600
+  &.is-xl
+    +button-size(fz(6), .625, .2)
+    font-weight: 700
+
+  &.is-icon
+    +padding(horizontal, .5em)
+    i
+      font-size: 1.125em
