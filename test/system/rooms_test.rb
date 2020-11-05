@@ -13,8 +13,7 @@ class RoomsTest < ApplicationSystemTestCase
     within 'form[name=room]' do
       fill_in 'room[name]', with: 'テストのイベント'
       fill_in 'room[password]', with: 'testtest'
-      fill_in 'room[password_confirmation]', with: 'testtest'
-      click_button 'このイベント名で決定'
+      click_button 'これで決定'
     end
     assert_text '質問収集箱完成！！'
   end
@@ -24,8 +23,7 @@ class RoomsTest < ApplicationSystemTestCase
     within 'form[name=room]' do
       fill_in 'room[name]', with: 'テストのイベント2'
       fill_in 'room[password]', with: 'testtesttest'
-      fill_in 'room[password_confirmation]', with: 'testtesttest'
-      click_button 'このイベント名で決定'
+      click_button 'これで決定'
     end
     assert_text '質問収集箱更新完了！！'
   end

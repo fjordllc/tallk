@@ -24,15 +24,9 @@
         .form__item
           .a-form-label
             | パスワード（半角英数記号で4文字以上）
-          = f.password_field :password, class: 'a-text-input', placeholder: 'ここにパスワードを入力（4文字以上）', required: 'required', minlength: '4'
+          = f.text_field :password, class: 'a-text-input', placeholder: 'ここにパスワードを入力（4文字以上）', required: 'required', minlength: '4'
           .form__help
             | 質問管理とイベントを開始する際に必要となります。登録したパスワードを忘れてしまうと、イベントが開催できなくなってしまうので、ご注意ください。
-        .form__item
-          .a-form-label
-            | パスワードをもう一回
-          = f.password_field :password_confirmation, class: 'a-text-input', placeholder: 'ここにパスワードを入力（確認用）', required: 'required', minlength: '4', oninput: 'checkPassword(this);'
-          .form__help
-            | 確認のためパスワードをもう一度入力
       .form__actions
         .form__action
           = f.submit class: 'a-ex-button is-md is-disabled', value: 'これで決定', id: 'js-main-action'
@@ -55,12 +49,5 @@
       } else {
         document.getElementById('js-main-action').classList.remove('is-disabled');
         document.getElementById('js-main-action').classList.add('animate__animated', 'animate__rubberBand');
-      }
-    }
-    function checkPassword(confirm) {
-      if(room_password.value !== confirm.value) {
-        confirm.setCustomValidity('入力値が一致しません');
-      } else {
-        confirm.setCustomValidity('')
       }
     }
