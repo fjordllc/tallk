@@ -4,7 +4,8 @@
       - @topics.each do |topic|
         li.topics__item
           .topics__item-inner
-            .topics__item-to #{topic.who}に聞きたい！
+            - if topic.who.present?
+              .topics__item-to #{topic.who}に聞きたい！
             .js-mikan = topic.name
       li.topics__item
         .topics__item-inner
