@@ -3,11 +3,6 @@
 class RoomsController < ApplicationController
   before_action :set_room, only: %i[show edit update]
 
-  def index
-    @rooms = Room.page(params[:page])
-    render layout: 'admin'
-  end
-
   def show; end
 
   def new
