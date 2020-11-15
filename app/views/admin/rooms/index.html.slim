@@ -1,0 +1,38 @@
+= render "/admin/page_header", title: "イベント一覧"
+
+.t-admin__body
+  .t-admin__contents
+    .o-admin-content
+      .l-container.is-mxw-100pc
+        - if @rooms.any?
+          .o-admin-content__row
+            = paginate @rooms
+          .o-admin-content__row
+            table.a-basic-table
+              tr
+                th
+                  | ID
+                th
+                  | イベント名
+                th
+                  | 質問数
+                th
+                  | 作成日時
+              - @rooms.each do |room|
+                tr
+                  td
+                    = room.id
+                  td
+                    = link_to room_path(room)
+                      - if room.name.present?
+                        = room.name
+                      - else
+                        | イベント名無し
+                  td
+                    = room.topics.count
+                  td
+                    = room.created_at
+          .o-admin-content__row
+            = paginate @rooms
+        - else
+          | まだイベントは作成されていません。

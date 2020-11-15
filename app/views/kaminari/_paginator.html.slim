@@ -1,0 +1,28 @@
+/ The container tag
+  - available local variables
+    current_page : a page object for the currently displayed page
+    total_pages  : total number of pages
+    per_page     : number of items to fetch per page
+    remote       : data-remote
+    paginator    : the paginator that renders the pagination tags inside
+
+== paginator.render do
+  nav.o-pagination
+    ul.o-pagination__items
+      - unless current_page.first?
+        li.o-pagination__item
+          == first_page_tag
+        li.o-pagination__item
+          == prev_page_tag
+      - each_page do |page|
+        - if page.display_tag?
+          li.o-pagination__item
+            == page_tag page
+        - elsif !page.was_truncated?
+          li.o-pagination__item
+            == gap_tag
+      - unless current_page.last?
+        li.o-pagination__item
+          == next_page_tag
+        li.o-pagination__item
+          == last_page_tag

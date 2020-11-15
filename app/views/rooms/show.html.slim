@@ -27,10 +27,10 @@
           | みんなから集めた質問のいくつかが当日ランダムで選ばれます。
     .form__actions
       - if @room.topics.empty?
-        = link_to '自分も質問を登録する', new_room_topic_path(@room), class: 'a-button animate__animated animate__rubberBand'
+        = link_to '自分も質問を登録する', new_room_topic_path(@room), class: 'a-ex-button animate__animated animate__rubberBand'
       - else
-        = link_to 'もっと質問を登録', new_room_topic_path(@room), class: 'a-button animate__animated animate__rubberBand'
-        = link_to 'トーク開始！', room_topics_path(@room), class: 'a-button is-danger'
+        = link_to 'もっと質問を登録', new_room_topic_path(@room), class: 'a-ex-button animate__animated animate__rubberBand'
+        = link_to 'トーク開始！', room_topics_path(@room), class: 'a-ex-button is-danger'
 
     .form__nav
       = link_to 'イベント名を変更', edit_room_path(@room), class: 'form__nav-link a-text-link'

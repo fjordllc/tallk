@@ -1,0 +1,10 @@
+header.o-basic-header
+  .l-container.is-mxw-100pc
+    .o-basic-header__inner
+      .o-basic-header__start
+        h1.a-brand-logo
+          = link_to root_path, class: "a-brand-logo__link" do
+           | フィヨルドトーク
+      .o-basic-header__end
+        .o-basic-header__block-links
+          //= render "header_nav"
