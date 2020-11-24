@@ -32,3 +32,4 @@
 
 # Ignore RubyMine .idea/
 .idea/
+.env
