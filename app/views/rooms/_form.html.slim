@@ -18,13 +18,13 @@
         .form__item
           .a-form-label
             | イベント名
-          = f.text_field :name, class: 'a-text-input', placeholder: 'ここにイベント名を入力', required: 'required'
+          = f.text_field :name, class: 'a-text-input', placeholder: 'ここにイベント名を入力', required: 'required', id: 'js-required-input1'
           .form__help
             | 例 : #{Time.current.year}年#{Time.current.month}月のフィヨルドミートアップ
         .form__item
           .a-form-label
             | パスワード（半角英数記号で4文字以上）
-          = f.text_field :password, class: 'a-text-input', placeholder: 'ここにパスワードを入力（4文字以上）', required: 'required', minlength: '4'
+          = f.text_field :password, class: 'a-text-input', placeholder: 'ここにパスワードを入力（4文字以上）', required: 'required', minlength: '4', id: 'js-required-input2'
           .form__help
             | 質問管理とイベントを開始する際に必要となります。登録したパスワードを忘れてしまうと、イベントが開催できなくなってしまうので、ご注意ください。
       .form__actions
@@ -35,19 +35,3 @@
           = link_to 'トップに戻る', root_path, class: 'form__nav-link a-text-link'
         - else
           = link_to 'やっぱ変更なしで', room, class: 'form__nav-link a-text-link'
-
-  javascript:
-    var input = document.getElementById('room_name')
-    var input2 = document.getElementById('room_password')
-    document.addEventListener("turbolinks:load", updateValue);
-    input.addEventListener('input', updateValue);
-    input2.addEventListener('input', updateValue);
-    function updateValue() {
-      if (!input.value || !input.value.match(/\S/g) || !input2.value) {
-        document.getElementById('js-main-action').classList.add('is-disabled');
-        document.getElementById('js-main-action').classList.remove('animate__animated', 'animate__rubberBand');
-      } else {
-        document.getElementById('js-main-action').classList.remove('is-disabled');
-        document.getElementById('js-main-action').classList.add('animate__animated', 'animate__rubberBand');
-      }
-    }

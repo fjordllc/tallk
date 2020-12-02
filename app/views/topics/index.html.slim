@@ -12,18 +12,3 @@
           .topics__item-to 全ての質問が出尽くしました
 
     = link_to '質問収集箱', room_path(@room), class: "topics__link"
-
-javascript:
-  var slider = tns({
-    container: '.js-slider',
-    items: 1,
-    loop: false,
-    touch: false,
-    nav: false,
-    arrowKeys: true
-  })
-
-  const target = document.querySelector('.js-mikan')
-  if (target) {
-    target.innerHTML = Mikan(target.innerHTML)
-  }

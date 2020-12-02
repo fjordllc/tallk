@@ -16,7 +16,7 @@
           label.a-form-label
             | 誰に聞きたいですか？
           .form__input-container
-            = f.text_field :who, class: 'a-text-input', placeholder: '聞きたい人を入力', required: 'required'
+            = f.text_field :who, class: 'a-text-input', placeholder: '聞きたい人を入力', required: 'required', id: 'js-required-input1'
             span.form__text
               | に聞きたい！
           .form__help.is-sm
@@ -25,7 +25,7 @@
         .form__item
           label.a-form-label
             | 質問内容
-          = f.text_area :name, class: 'a-text-input', placeholder: '質問文を入力', required: 'required'
+          = f.text_area :name, class: 'a-text-input', placeholder: '質問文を入力', required: 'required', id: 'js-required-input2'
           .form__help.is-sm
             | 例 : 集中力が続かずついついNETFLIXを観てしまいます。
             | 集中力を持続させる工夫をしてますか？、わからないことを質問するのが難しいです。
@@ -35,19 +35,3 @@
         = f.submit class: 'a-ex-button is-md', value: 'この質問を登録', id: "js-main-action"
       .form__nav
         = link_to '質問収集箱へ', room_path(@room), class: 'form__nav-link a-text-link'
-
-javascript:
-  var input = document.getElementById('topic_who')
-  var input2 = document.getElementById('topic_name')
-  document.addEventListener("turbolinks:load", updateValue);
-  input.addEventListener('input', updateValue);
-  input2.addEventListener('input', updateValue);
-  function updateValue() {
-    if (!input.value || !input.value.match(/\S/g) || !input2.value) {
-      document.getElementById('js-main-action').classList.add('is-disabled');
-      document.getElementById('js-main-action').classList.remove('animate__animated', 'animate__rubberBand');
-    } else {
-      document.getElementById('js-main-action').classList.remove('is-disabled');
-      document.getElementById('js-main-action').classList.add('animate__animated', 'animate__rubberBand');
-    }
-  }

@@ -43,7 +43,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'dotenv-rails'
 gem 'bcrypt'
-gem 'webpacker'
+gem 'dotenv-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'webpacker'
