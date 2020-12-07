@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :rooms, only: :index
+    resources :rooms, only: %i[index show]
   end
 
   root 'top#index'
