@@ -47,3 +47,4 @@ gem 'bcrypt'
 gem 'dotenv-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'webpacker'
+gem 'rails-i18n'
