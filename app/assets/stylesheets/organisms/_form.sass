@@ -20,9 +20,9 @@
   line-height: 1.4
   color: #b9b1ea
   +mq($from: mobile, $until: desktop)
-    font-size: 1rem
+    font-size: fz(3)
   +mq($from: desktop)
-    font-size: 1.25rem
+    font-size: fz(3)
   &.is-sm
     +mq($from: mobile, $until: desktop)
       font-size: .875rem
@@ -47,8 +47,8 @@
       margin-top: 2rem
 
 .form__item
-  .a-label
-    margin-bottom: .5rem
+  .a-form-label
+    margin-bottom: .5em
   .form__item + &
     margin-top: 2rem
 

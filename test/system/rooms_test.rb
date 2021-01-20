@@ -12,7 +12,8 @@ class RoomsTest < ApplicationSystemTestCase
     visit '/rooms/new'
     within 'form[name=room]' do
       fill_in 'room[name]', with: 'テストのイベント'
-      click_button 'このイベント名で決定'
+      fill_in 'room[password]', with: 'testtest'
+      click_button 'これで決定'
     end
     assert_text '質問収集箱完成！！'
   end
@@ -21,7 +22,8 @@ class RoomsTest < ApplicationSystemTestCase
     visit "/rooms/#{rooms(:room_1).id}/edit"
     within 'form[name=room]' do
       fill_in 'room[name]', with: 'テストのイベント2'
-      click_button 'このイベント名で決定'
+      fill_in 'room[password]', with: 'testtesttest'
+      click_button 'これで決定'
     end
     assert_text '質問収集箱更新完了！！'
   end

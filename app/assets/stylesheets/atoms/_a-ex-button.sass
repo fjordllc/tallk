@@ -1,16 +1,4 @@
-.a-ex-button
-  display: flex
-  align-items: center
-  justify-content: center
-  text-decoration: none
-  font-weight: 800
-  color: $default-text
-  padding: 0 2em
-  border-radius: .25em
-  cursor: pointer
-  white-space: nowrap
-  height: 2.75em
-  transition: all .4s ease-out
+=primary
   background-color: $yellow
   background-image: linear-gradient(#fbc73b, #b77411)
   border-style: solid
@@ -18,12 +6,30 @@
   border-color: #ffdf89 #d6a521 #945d0c
   box-shadow: rgba(black, .25) 0 .125rem .5rem 0.125em, rgba(white, .25) 0 0 .25rem 1px inset
   text-shadow: rgba(white, .7) 0 1px 2px
-  +mq($from: mobile, $until: desktop)
-    font-size: 1.25rem
-    min-width: 100%
-  +mq($from: desktop)
-    font-size: 2rem
-    min-width: 14em
+
+.a-ex-button
+  +button-base
+  font-weight: 800
+  color: $default-text
+  padding: 0 2em
+  border-radius: .25em
+  height: 2.75em
+  transition: all .4s ease-out
+  +primary
+  &.is-lg
+    +mq($from: mobile, $until: desktop)
+      font-size: fz(6)
+      min-width: 100%
+    +mq($from: desktop)
+      font-size: fz(7)
+      min-width: 14em
+  &.is-md
+    +mq($from: mobile, $until: desktop)
+      font-size: fz(5)
+      min-width: 100%
+    +mq($from: desktop)
+      font-size: fz(6)
+      min-width: 14em
   &:hover
     color: #2d2d33
     border-color: #fbdf98 #eccf7e #c79953
