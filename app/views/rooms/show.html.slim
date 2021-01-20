@@ -40,3 +40,6 @@
     .form__nav
       = link_to 'イベント名を変更', edit_room_path(@room), class: 'form__nav-link a-text-link'
       = link_to '最初からやり直す', root_path, class: 'form__nav-link a-text-link'
+    = form_tag admin_room_path(@room), method: 'get' do
+      = text_field_tag :entered_password, nil, class: 'a-text-input'
+      = submit_tag '質問箱管理ページへ'

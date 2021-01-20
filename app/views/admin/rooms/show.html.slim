@@ -1,0 +1,32 @@
+= render "/admin/page_header", title: "#{@room.name}の質問一覧"
+
+.t-admin__body
+  .t-admin__contents
+    .o-admin-content
+      .l-container.is-mxw-100pc
+        - if @topics.any?
+          .o-admin-content__row
+            = paginate @topics
+          .o-admin-content__row
+            table.a-basic-table
+              tr
+                th
+                  | 質問したい人
+                th
+                  | 質問内容
+                th
+                  | 作成日時
+              - @topics.each do |topic|
+                tr
+                  td
+                    = topic.who
+                  td
+                    = topic.name
+                  td
+                    = l topic.created_at, format: :long
+          .o-admin-content__row
+            = paginate @topics
+        - else
+          | まだ質問が登録されていません
+
+= link_to '質問箱トップページに戻る', @room
