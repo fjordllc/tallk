@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('js-required-input1');
   const input2 = document.getElementById('js-required-input2');
   if (input && input2) {

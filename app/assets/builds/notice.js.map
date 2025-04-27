@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../javascript/notice.js"],
+  "sourcesContent": ["document.addEventListener('DOMContentLoaded', () => {\n  const element = document.querySelector('.o-flash');\n  if (element){\n    element.addEventListener('animationend', () => {\n      element.classList.add('is-hidden');\n    });\n  }\n})\n"],
+  "mappings": ";;AAAA,WAAS,iBAAiB,oBAAoB,MAAM;AAClD,UAAM,UAAU,SAAS,cAAc,UAAU;AACjD,QAAI,SAAQ;AACV,cAAQ,iBAAiB,gBAAgB,MAAM;AAC7C,gBAAQ,UAAU,IAAI,WAAW;AAAA,MACnC,CAAC;AAAA,IACH;AAAA,EACF,CAAC;",
+  "names": []
+}
