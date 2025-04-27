@@ -18,12 +18,12 @@ gem 'net-imap', require: false
 gem 'net-pop', require: false
 gem 'net-smtp', require: false
 gem 'nio4r', '~> 2.5.9'
-gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'rails', '6.1.7'
 gem 'sassc-rails'
 gem 'sass-rails'
 gem 'slim-rails'
+gem 'sqlite3', '~> 1.4'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'webpacker'
