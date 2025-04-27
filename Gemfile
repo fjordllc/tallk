@@ -7,26 +7,27 @@ ruby '3.2.8'
 
 gem 'autoprefixer-rails'
 gem 'bcrypt'
-gem 'bootsnap', '1.13.0', require: false
+gem 'bootsnap', require: false
 gem 'dotenv-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'jbuilder', '~> 2.5'
 gem 'kaminari'
 # gem 'logger', '~> 1.7.0' # Removed to fix compatibility issue with Rails 6.1.7 and Ruby 3.2.8
+gem 'cssbundling-rails'
+gem 'jsbundling-rails'
 gem 'meta-tags'
 gem 'net-imap', require: false
 gem 'net-pop', require: false
 gem 'net-smtp', require: false
 gem 'nio4r', '~> 2.5.9'
-gem 'puma', '~> 5.0'
-gem 'rails', '6.1.7'
+gem 'puma', '~> 6.0'
+gem 'rails', '7.2.2.1'
 gem 'sassc-rails'
 gem 'sass-rails'
 gem 'slim-rails'
 gem 'sqlite3', '~> 1.4'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'webpacker'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
