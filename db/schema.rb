@@ -12,21 +12,17 @@
 
 ActiveRecord::Schema.define(version: 2022_11_10_073855) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "pgcrypto"
-  enable_extension "plpgsql"
-
-  create_table "rooms", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "rooms", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
   end
 
-  create_table "topics", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "topics", force: :cascade do |t|
     t.string "name", null: false
     t.string "who", null: false
-    t.uuid "room_id"
+    t.integer "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_topics_on_room_id"
