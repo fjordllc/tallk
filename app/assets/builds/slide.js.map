@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../javascript/slide.js"],
-  "sourcesContent": ["document.addEventListener('DOMContentLoaded', () => {\n  const sliderContainer = document.querySelector('.js-slider');\n  if (sliderContainer) {\n    const slider = tns({\n      container: '.js-slider',\n      items: 1,\n      loop: false,\n      touch: false,\n      nav: false,\n      arrowKeys: true\n    });\n  } else {\n    console.log('Slider container not found, skipping initialization');\n  }\n\n  const target = document.querySelector('.js-mikan')\n  if (target && typeof Mikan === 'function') {\n    target.innerHTML = Mikan(target.innerHTML)\n  }\n})\n"],
-  "mappings": ";;AAAA,WAAS,iBAAiB,oBAAoB,MAAM;AAClD,UAAM,kBAAkB,SAAS,cAAc,YAAY;AAC3D,QAAI,iBAAiB;AACnB,YAAM,SAAS,IAAI;AAAA,QACjB,WAAW;AAAA,QACX,OAAO;AAAA,QACP,MAAM;AAAA,QACN,OAAO;AAAA,QACP,KAAK;AAAA,QACL,WAAW;AAAA,MACb,CAAC;AAAA,IACH,OAAO;AACL,cAAQ,IAAI,qDAAqD;AAAA,IACnE;AAEA,UAAM,SAAS,SAAS,cAAc,WAAW;AACjD,QAAI,UAAU,OAAO,UAAU,YAAY;AACzC,aAAO,YAAY,MAAM,OAAO,SAAS;AAAA,IAC3C;AAAA,EACF,CAAC;",
-  "names": []
-}
