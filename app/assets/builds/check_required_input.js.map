@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../javascript/check_required_input.js"],
-  "sourcesContent": ["document.addEventListener('DOMContentLoaded', () => {\n  const input = document.getElementById('js-required-input1');\n  const input2 = document.getElementById('js-required-input2');\n  if (input && input2) {\n    input.addEventListener('input', updateValue);\n    input2.addEventListener('input', updateValue);\n    function updateValue() {\n      if (!input.value || !input.value.match(/\\S/g) || !input2.value) {\n        document.getElementById('js-main-action').classList.add('is-disabled');\n        document.getElementById('js-main-action').classList.remove('animate__animated', 'animate__rubberBand');\n      } else {\n        document.getElementById('js-main-action').classList.remove('is-disabled');\n        document.getElementById('js-main-action').classList.add('animate__animated', 'animate__rubberBand');\n      }\n    }\n  }\n})\n"],
-  "mappings": ";;AAAA,WAAS,iBAAiB,oBAAoB,MAAM;AAClD,UAAM,QAAQ,SAAS,eAAe,oBAAoB;AAC1D,UAAM,SAAS,SAAS,eAAe,oBAAoB;AAC3D,QAAI,SAAS,QAAQ;AAGnB,UAASA,eAAT,WAAuB;AACrB,YAAI,CAAC,MAAM,SAAS,CAAC,MAAM,MAAM,MAAM,KAAK,KAAK,CAAC,OAAO,OAAO;AAC9D,mBAAS,eAAe,gBAAgB,EAAE,UAAU,IAAI,aAAa;AACrE,mBAAS,eAAe,gBAAgB,EAAE,UAAU,OAAO,qBAAqB,qBAAqB;AAAA,QACvG,OAAO;AACL,mBAAS,eAAe,gBAAgB,EAAE,UAAU,OAAO,aAAa;AACxE,mBAAS,eAAe,gBAAgB,EAAE,UAAU,IAAI,qBAAqB,qBAAqB;AAAA,QACpG;AAAA,MACF;AARS,wBAAAA;AAFT,YAAM,iBAAiB,SAASA,YAAW;AAC3C,aAAO,iBAAiB,SAASA,YAAW;AAAA,IAU9C;AAAA,EACF,CAAC;",
-  "names": ["updateValue"]
-}

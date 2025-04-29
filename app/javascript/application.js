@@ -1,14 +1,3 @@
-// Entry point for the build script in your package.json
-import 'tiny-slider/dist/tiny-slider.css';
-import { tns } from 'tiny-slider/src/tiny-slider';
-
-// Import Font Awesome
-import '@fortawesome/fontawesome-free/js/all';
-
-// Make tns available globally
-window.tns = tns;
-
-// Import our custom scripts
-import './check_required_input.js'
-import './notice.js'
-import './slide.js'
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+import "@hotwired/turbo-rails"
+import "controllers"

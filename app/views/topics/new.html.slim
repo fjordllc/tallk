@@ -1,4 +1,4 @@
-= form_with model: [@room, @topic], local: true, html: { name: 'topic' } do |f|
+= form_with model: [@room, @topic], local: true, html: { name: 'topic', data: { controller: 'required-input' } } do |f|
   - if @topic.errors.any?
     #error_explanation
       h2 = "#{pluralize(@topic.errors.count, "error")} prohibited this room from being saved:"
@@ -16,7 +16,7 @@
           label.a-form-label
             | 誰に聞きたいですか？
           .form__input-container
-            = f.text_field :who, class: 'a-text-input', placeholder: '聞きたい人を入力', required: 'required', id: 'js-required-input1'
+            = f.text_field :who, class: 'a-text-input', placeholder: '聞きたい人を入力', required: 'required', data: { required_input_target: 'input1', action: 'input->required-input#updateValue' }
             span.form__text
               | に聞きたい！
           .form__help.is-sm
@@ -25,13 +25,13 @@
         .form__item
           label.a-form-label
             | 質問内容
-          = f.text_area :name, class: 'a-text-input', placeholder: '質問文を入力', required: 'required', id: 'js-required-input2'
+          = f.text_area :name, class: 'a-text-input', placeholder: '質問文を入力', required: 'required', data: { required_input_target: 'input2', action: 'input->required-input#updateValue' }
           .form__help.is-sm
             | 例 : 集中力が続かずついついNETFLIXを観てしまいます。
             | 集中力を持続させる工夫をしてますか？、わからないことを質問するのが難しいです。
             | 質問のコツを教えてください。就職先を選ぶポイントを教えてください。
             | 最近買ってよかったものって何かありますか？
       .form__actions
-        = f.submit class: 'a-ex-button is-md is-disabled', value: 'この質問を登録', id: "js-main-action"
+        = f.submit class: 'a-ex-button is-md is-disabled', value: 'この質問を登録', data: { required_input_target: 'mainAction' }
       .form__nav
         = link_to '質問収集箱へ', room_path(@room), class: 'form__nav-link a-text-link'

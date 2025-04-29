@@ -1,7 +1,205 @@
+---
 room_1:
-  name: 2020年02月10日のフィヨルドミートアップ
-  password_digest: <%= BCrypt::Password.create('testtest') %>
-
+  name: 2020年05月28日のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
 room_2:
-  name: 2020年03月10日のフィヨルドミートアップ
-  password_digest: <%= BCrypt::Password.create('testtest') %>
+  name: フィヨルディング
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_3:
+  name: れい
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_4:
+  name: test
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_5:
+  name: 2020年06月25日フィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_6:
+  name: hoge
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_7:
+  name: 2020年8月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_8:
+  name: テスト
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_9:
+  name: 2020年9月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_10:
+  name: テスト
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_11:
+  name: 2020年12月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_12:
+  name: foo
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_13:
+  name: 2021年1月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_14:
+  name: 2021年2月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_15:
+  name: 2021年2月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_16:
+  name: 2021年3月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_17:
+  name: えええ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_18:
+  name: 2021年4月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_19:
+  name: 2021年5月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_20:
+  name: 2021年6月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_21:
+  name: テストイベント
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_22:
+  name: えt
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_23:
+  name: 2021年7月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_24:
+  name: 7/14のランチ会
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_25:
+  name: 2021年8月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_26:
+  name: 2021年10月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_27:
+  name: 10/21(木)ランチ会
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_28:
+  name: ちょっとお先に忘年会2021
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_29:
+  name: " 2021年12月のフィヨルドミートアップ"
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_30:
+  name: 2022年1月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_31:
+  name: 感謝祭
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_32:
+  name: 2022年2月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_33:
+  name: 2022年3月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_34:
+  name: 2022年5月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_35:
+  name: 2022年6月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_36:
+  name: 2022年6月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_37:
+  name: 2022年7月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_38:
+  name: undo
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_39:
+  name: 2022年8月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_40:
+  name: 2022年9月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_41:
+  name: 2022年10月のフィヨルドミートアップ
+  password_digest: "<%= BCrypt::Password.create('testtest') %>"
+room_42:
+  name: test
+  password_digest: "$2a$12$FGwwzdMkcrDP5joxK2BzIuJnXKYCylGzLGc0wILS/Jddpyz/Mm67m"
+room_43:
+  name: test2
+  password_digest: "$2a$12$/bliJDvbCi4VWAvdC/WNXu6wtqNkTwqGZ1wXMz8KbWS1Vx2lcg/3."
+room_44:
+  name: 2022年12月のフィヨルドミートアップ
+  password_digest: "$2a$12$rInHim5ooymI8eWQM7m6.OtB3LterlUyv.hkpH5wguNgv6AJs.sci"
+room_45:
+  name: 2022年12月のフィヨルドミートアップ
+  password_digest: "$2a$12$srE.8taROsiwr4DbfYADMevDpjoYBq6n6doJQpTtzS2hvTfNvIkEO"
+room_46:
+  name: 2023年1月のフィヨルドミートアップ
+  password_digest: "$2a$12$kDmdgfW2crkc4k082eDLheiobuW.ySqLjQhp752wd0asSsioOKUZy"
+room_47:
+  name: ket
+  password_digest: "$2a$12$ZKya6d1HNdX5pP1DqHg86ec72KrUV0wtMRl7d7GRzIRTYqWOHvN5S"
+room_48:
+  name: " 2023年2月のフィヨルドミートアップ"
+  password_digest: "$2a$12$KN0m2m6aUl1d21n5QOwbkOwg5W1c6ZFjFrXVTbLV4DmjkAhCorJZe"
+room_49:
+  name: 2023年3月のフィヨルドミートアップ
+  password_digest: "$2a$12$Pv9MN2w2FowD0louoCb1KOxfZs5reNl8mepOXM8R.VQrMra6mxFDy"
+room_50:
+  name: 2023年4月のフィヨルドミートアップ
+  password_digest: "$2a$12$Z080xpXDU9yC6O/QiF3iYujd1h8XBpzvAegOhLAQlsWaY3Ia09gp2"
+room_51:
+  name: " 2023年6月のフィヨルドミートアップ"
+  password_digest: "$2a$12$mPFmuOlty0TdtSXgs8Kk2uSaKC0OeBE8nzwmVqrYkZEcUD2ooY.ty"
+room_52:
+  name: test
+  password_digest: "$2a$12$zSsWOFTlyvP5H9ZcP6wdXeexMyRi3kHHgq3ZKrv/wO6TXwkbUchWC"
+room_53:
+  name: test
+  password_digest: "$2a$12$6Xsaz8ccx0yLHfuk2XPFBezf4TKoSyp7iUYyeqyxTtwNN3342H44m"
+room_54:
+  name: 2023年7月のフィヨルドミートアップ
+  password_digest: "$2a$12$omkN54/gTULqfVt45mrN.OBrFEkzNfZCG/6HqWZxkaoaJ1ncsKZc2"
+room_55:
+  name: 2023年8月のフィヨルドミートアップ
+  password_digest: "$2a$12$1D.PLXP4Ier3iiVkmOMNkuGZfXl8pXMgHrsK5hvJAC6FMxAkZhY/2"
+room_56:
+  name: 2023年9月のフィヨルドミートアップ
+  password_digest: "$2a$12$y.bpuMkGiW81RNT0HOhf5eh1uaTTw5KLHKixoaDrFSuEQgp3U8Hqu"
+room_57:
+  name: 2023年10月のフィヨルドミートアップ
+  password_digest: "$2a$12$gwfdNLiAIbq0W9/ttgs4te34ZQ0N//3ojoXKqxbVsECOOSE/BxvAS"
+room_58:
+  name: 2023年12月のフィヨルドミートアップ
+  password_digest: "$2a$12$sNcSMOdjeJZOI2mz/1EoZ.1aHpe0G4tUPWVWmMgxFqHaN8Y2Vzdmi"
+room_59:
+  name: 2024年1月のフィヨルドミートアップ
+  password_digest: "$2a$12$X2fa7d9gAjccogMkYM7p9ezGs0W.MfqwhAVrunZreKweVgGd6zg7W"
+room_60:
+  name: 2024年2月のフィヨルドミートアップ
+  password_digest: "$2a$12$z8wJ9Ii.zMopmvkE/mxsL.rPXOp8.PCBdqu1pwwe9p7OhHU7KclYC"
+room_61:
+  name: 2024年3月のフィヨルドミートアップ
+  password_digest: "$2a$12$jlSMq6VQ812pULhtBqjyv.HIPb7cL.L7VTIrgF4LbS6Rpe7UCCr8C"
+room_62:
+  name: 2024年4月のフィヨルドミートアップ
+  password_digest: "$2a$12$tsh.X5APGXF.xDsntK68COZ1E2/ENWhXX7GvqPxN2SFKXxd643Ga6"
+room_63:
+  name: 質問集
+  password_digest: "$2a$12$4ppQOHPGwekFfJ1ClsZcNO7HbGEOoNZTJt7vLKwL.pB8GQ4u2l9yq"
+room_64:
+  name: 質問
+  password_digest: "$2a$12$q2IwBUfb3Cv9nyO1EYVzOeRYJ.VQipJX2vSS5BtyTimlHkXnBplc6"
+room_65:
+  name: 2024年7月のフィヨルドミートアップ
+  password_digest: "$2a$12$byqQennRsQNobCouaOQmnOShgQkC9BdA1tfvglOi2wO55zKXkttPm"
+room_66:
+  name: test
+  password_digest: "$2a$12$DmbEMU/gnd/ugGJE4XygWeQrQ8UiFhQFyMSsfjR2aM0E9OO1e8MTu"
+room_67:
+  name: test
+  password_digest: "$2a$12$GiYLHvWW5y0yVAetEWHJY.EhP2nKlhyDy6bjwU7EeslaDBlrmbUXe"
+room_68:
+  name: aaaa
+  password_digest: "$2a$12$lZ4nFADmZqoEcZPtHZNZN.UG/PB6f4lNCGBbopyENry5ILt5kMoI."
