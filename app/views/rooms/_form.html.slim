@@ -1,4 +1,4 @@
-= form_with model: room, local: true, html: { name: 'room' } do |f|
+= form_with model: room, local: true, html: { name: 'room', data: { controller: 'required-input' } } do |f|
   - if room.errors.any?
     #error_explanation
       h2 = "#{pluralize(room.errors.count, "error")} prohibited this room from being saved:"
@@ -18,18 +18,18 @@
         .form__item
           .a-form-label
             | イベント名
-          = f.text_field :name, class: 'a-text-input', placeholder: 'ここにイベント名を入力', required: 'required', id: 'js-required-input1'
+          = f.text_field :name, class: 'a-text-input', placeholder: 'ここにイベント名を入力', required: 'required', data: { required_input_target: 'input1', action: 'input->required-input#updateValue' }
           .form__help
             | 例 : #{Time.current.year}年#{Time.current.month}月のフィヨルドミートアップ
         .form__item
           .a-form-label
             | パスワード（半角英数記号で4文字以上）
-          = f.text_field :password, class: 'a-text-input', placeholder: 'ここにパスワードを入力（4文字以上）', required: 'required', minlength: '4', id: 'js-required-input2'
+          = f.text_field :password, class: 'a-text-input', placeholder: 'ここにパスワードを入力（4文字以上）', required: 'required', minlength: '4', data: { required_input_target: 'input2', action: 'input->required-input#updateValue' }
           .form__help
             | 質問管理とイベントを開始する際に必要となります。登録したパスワードを忘れてしまうと、イベントが開催できなくなってしまうので、ご注意ください。
       .form__actions
         .form__action
-          = f.submit class: 'a-ex-button is-md is-disabled', value: 'これで決定', id: 'js-main-action'
+          = f.submit class: 'a-ex-button is-md is-disabled', value: 'これで決定', data: { required_input_target: 'mainAction' }
       .form__nav
         - if room.new_record?
           = link_to 'トップに戻る', root_path, class: 'form__nav-link a-text-link'
