@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-ruby '3.3.8'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # Use Sprockets for asset pipeline [https://github.com/rails/sprockets-rails]
@@ -69,7 +67,6 @@ group :test do
 end
 
 # Project specific gems
-gem 'autoprefixer-rails'
 gem 'dotenv-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'kaminari'
