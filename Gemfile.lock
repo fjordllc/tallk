@@ -402,6 +402,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rails-omakase
   sass-rails
+  sassc-rails
   selenium-webdriver
   slim-rails
   solid_cable
