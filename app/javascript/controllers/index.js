@@ -1,8 +1,4 @@
-// Import and register all your controllers from the importmap under controllers/*
-
+// Import and register all your controllers from the importmap via controllers/**/*_controller
 import { application } from "controllers/application"
-
-// Import and register your controllers
-import RequiredInputController from "./required_input_controller"
-
-application.register("required-input", RequiredInputController)
+import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
+eagerLoadControllersFrom("controllers", application)

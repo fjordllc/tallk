@@ -1,9 +1,7 @@
-// Turboを使用する場合は、DOMContentLoadedの代わりにturbo:loadイベントを使用
 document.addEventListener('turbo:load', () => {
   initializeNotice();
 });
 
-// ページがキャッシュから復元された場合にも実行
 document.addEventListener('turbo:render', () => {
   initializeNotice();
 });
