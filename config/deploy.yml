@@ -70,6 +70,13 @@ volumes:
 # version inside the asset_path.
 asset_path: /app/public/assets
 
+# Configure healthcheck for the application
+healthcheck:
+  path: /up
+  port: 3000
+  protocol: http
+  timeout: 30
+
 # Configure rolling deploys by setting a wait time between batches of restarts.
 boot:
   limit: 25%
