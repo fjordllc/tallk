@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+
+# Logs
+log/*
+!log/.keep
+
+# Temporary files
+tmp/*
+!tmp/.keep
+
+# Development environment
+.env
+.env.*
+!.env.example
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Node modules
+node_modules
+
+# Test files
+test
+spec
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+
+# Editor configs
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+.kamal/secrets
