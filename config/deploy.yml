@@ -64,6 +64,7 @@ aliases:
 volumes:
   - "tallk_storage:/rails/storage"
   - "tallk_public_uploads:/rails/public/uploads"
+  - "tallk_db:/rails/db"
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
 # hitting 404 on in-flight requests. Combines all files from new and old

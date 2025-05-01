@@ -9,20 +9,22 @@ mkdir -p /rails/storage
 mkdir -p /rails/tmp/pids
 mkdir -p /rails/db
 
-# Make sure the storage directory is writable
-chmod -R 777 /rails/storage
+# Make sure the db directory is writable
 chmod -R 777 /rails/db
 
 # If running the rails server, wait for the database to be ready
 if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
   # Wait for database to be ready
   echo "Waiting for database to be ready..."
-  # Create database directory if it doesn't exist
-  touch /rails/storage/production.sqlite3
-  touch /rails/storage/production_cache.sqlite3
-  touch /rails/storage/production_queue.sqlite3
-  touch /rails/storage/production_cable.sqlite3
-  chmod 666 /rails/storage/*.sqlite3
+  # Try to create database files if they don't exist
+  if [ ! -f /rails/storage/production.sqlite3 ]; then
+    echo "Creating empty database files..."
+    touch /rails/db/production.sqlite3
+    touch /rails/db/production_cache.sqlite3
+    touch /rails/db/production_queue.sqlite3
+    touch /rails/db/production_cable.sqlite3
+    chmod 666 /rails/db/*.sqlite3
+  fi
   bin/rails db:prepare
 fi
 
