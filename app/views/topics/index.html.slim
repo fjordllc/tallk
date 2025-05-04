@@ -1,14 +1,16 @@
 - if @topics.any?
   .topics
-    ul.js-slider.topics__items
-      - @topics.each do |topic|
-        li.topics__item
-          .topics__item-inner
-            - if topic.who.present?
-              .topics__item-to #{topic.who}に聞きたい！
-            .js-mikan = topic.name
-      li.topics__item
-        .topics__item-inner
-          .topics__item-to 全ての質問が出尽くしました
+    .js-slider.splide
+      .splide__track
+        ul.splide__list.topics__items
+          - @topics.each do |topic|
+            li.splide__slide.topics__item
+              .topics__item-inner
+                - if topic.who.present?
+                  .topics__item-to #{topic.who}に聞きたい！
+                .js-mikan = topic.name
+          li.splide__slide.topics__item
+            .topics__item-inner
+              .topics__item-to 全ての質問が出尽くしました
 
     = link_to '質問収集箱', room_path(@room), class: "topics__link"
