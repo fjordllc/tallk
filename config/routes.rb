@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :rooms, only: :index
+    resources :rooms, only: %i[index destroy]
   end
 
   root 'top#index'

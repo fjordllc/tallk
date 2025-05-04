@@ -10,28 +10,16 @@
           .o-admin-content__row
             table.a-basic-table
               tr
-                th
-                  | ID
-                th
-                  | イベント名
-                th
-                  | 質問数
-                th
-                  | 作成日時
+                th イベント名
+                th 質問数
+                th 作成日時
+                th アクション
               - @rooms.each do |room|
                 tr
-                  td
-                    = room.id
-                  td
-                    = link_to room_path(room)
-                      - if room.name.present?
-                        = room.name
-                      - else
-                        | イベント名無し
-                  td
-                    = room.topics.count
-                  td
-                    = room.created_at
+                  td = link_to room.name, room_path(room)
+                  td = room.topics.count
+                  td = l room.created_at, format: :long
+                  td = link_to "削除", [:admin, room], data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" }
           .o-admin-content__row
             = paginate @rooms
         - else
