@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 8.0.2'
-# Use Sprockets for asset pipeline [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
+# The modern asset pipeline for Rails [https://github.com/rails/propshaft]
+gem 'propshaft'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '>= 2.1'
 # Use the Puma web server [https://github.com/puma/puma]
@@ -67,11 +67,7 @@ group :test do
 end
 
 # Project specific gems
-gem 'dotenv-rails'
-gem 'font-awesome-sass', '~> 5.8.1'
 gem 'kaminari'
 gem 'meta-tags'
 gem 'rails-i18n', '~> 8.0.0'
-gem 'sassc-rails'
-gem 'sass-rails'
 gem 'slim-rails'
