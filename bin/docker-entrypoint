@@ -1,32 +1,14 @@
-#!/bin/bash
-set -e
+#!/bin/bash -e
 
-# Remove a potentially pre-existing server.pid for Rails
-rm -f /rails/tmp/pids/server.pid
-
-# Ensure storage directory exists and has correct permissions
-mkdir -p /rails/storage
-mkdir -p /rails/tmp/pids
-mkdir -p /rails/db
-
-# Make sure the db directory is writable
-chmod -R 777 /rails/db
-
-# If running the rails server, wait for the database to be ready
-if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
-  # Wait for database to be ready
-  echo "Waiting for database to be ready..."
-  # Try to create database files if they don't exist
-  if [ ! -f /rails/storage/production.sqlite3 ]; then
-    echo "Creating empty database files..."
-    touch /rails/db/production.sqlite3
-    touch /rails/db/production_cache.sqlite3
-    touch /rails/db/production_queue.sqlite3
-    touch /rails/db/production_cable.sqlite3
-    chmod 666 /rails/db/*.sqlite3
-  fi
-  bin/rails db:prepare
+# Enable jemalloc for reduced memory usage and latency.
+if [ -z "${LD_PRELOAD+x}" ]; then
+    LD_PRELOAD=$(find /usr/lib -name libjemalloc.so.2 -print -quit)
+    export LD_PRELOAD
 fi
 
-# Execute the given or default command
-exec "$@"
+# If running the rails server then create or migrate existing database
+if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
+  ./bin/rails db:prepare
+fi
+
+exec "${@}"
