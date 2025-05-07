@@ -1,0 +1,2373 @@
+@charset "UTF-8";
+/* line 1, app/assets/stylesheets/initializers/_reset.sass */
+* {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 5, app/assets/stylesheets/initializers/_reset.sass */
+body {
+  line-height: 1;
+}
+
+/* line 8, app/assets/stylesheets/initializers/_reset.sass */
+input,
+select {
+  vertical-align: middle;
+}
+
+/* line 12, app/assets/stylesheets/initializers/_reset.sass */
+input,
+select,
+textarea {
+  outline: none;
+}
+
+/* line 17, app/assets/stylesheets/initializers/_reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 21, app/assets/stylesheets/initializers/_reset.sass */
+ul,
+ol {
+  list-style: none;
+}
+
+/* line 25, app/assets/stylesheets/initializers/_reset.sass */
+hr {
+  border: none;
+}
+
+/*!
+ * ress.css • v1.2.2
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+/* line 11, app/assets/stylesheets/initializers/_ress.scss */
+html {
+  box-sizing: border-box;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */
+}
+
+/* line 19, app/assets/stylesheets/initializers/_ress.scss */
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+  box-sizing: inherit;
+}
+
+/* line 27, app/assets/stylesheets/initializers/_ress.scss */
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+/* line 34, app/assets/stylesheets/initializers/_ress.scss */
+* {
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+/* line 45, app/assets/stylesheets/initializers/_ress.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 50, app/assets/stylesheets/initializers/_ress.scss */
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+}
+
+/*
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox
+* Correct `block` display not defined for `main` in IE 11
+*/
+/* line 61, app/assets/stylesheets/initializers/_ress.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 76, app/assets/stylesheets/initializers/_ress.scss */
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+/* line 81, app/assets/stylesheets/initializers/_ress.scss */
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+/* line 86, app/assets/stylesheets/initializers/_ress.scss */
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+/* line 92, app/assets/stylesheets/initializers/_ress.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */
+}
+
+/* line 99, app/assets/stylesheets/initializers/_ress.scss */
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+}
+
+/* line 106, app/assets/stylesheets/initializers/_ress.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+/* line 112, app/assets/stylesheets/initializers/_ress.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+/* line 120, app/assets/stylesheets/initializers/_ress.scss */
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+
+/* line 126, app/assets/stylesheets/initializers/_ress.scss */
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */
+}
+
+/* Address styling not present in IE 8/9 */
+/* line 132, app/assets/stylesheets/initializers/_ress.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* https://gist.github.com/unruthless/413930 */
+/* line 138, app/assets/stylesheets/initializers/_ress.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 146, app/assets/stylesheets/initializers/_ress.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 150, app/assets/stylesheets/initializers/_ress.scss */
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+/* line 158, app/assets/stylesheets/initializers/_ress.scss */
+input {
+  border-radius: 0;
+}
+
+/* Apply cursor pointer to button elements */
+/* line 163, app/assets/stylesheets/initializers/_ress.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Replace pointer cursor in disabled elements */
+/* line 172, app/assets/stylesheets/initializers/_ress.scss */
+[disabled] {
+  cursor: default;
+}
+
+/* line 176, app/assets/stylesheets/initializers/_ress.scss */
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */
+}
+
+/* line 181, app/assets/stylesheets/initializers/_ress.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */
+}
+
+/* line 186, app/assets/stylesheets/initializers/_ress.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */
+}
+
+/* line 192, app/assets/stylesheets/initializers/_ress.scss */
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+/* line 199, app/assets/stylesheets/initializers/_ress.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+/* line 208, app/assets/stylesheets/initializers/_ress.scss */
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */
+}
+
+/* line 213, app/assets/stylesheets/initializers/_ress.scss */
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+/* line 219, app/assets/stylesheets/initializers/_ress.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+/* line 228, app/assets/stylesheets/initializers/_ress.scss */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 235, app/assets/stylesheets/initializers/_ress.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+/* line 244, app/assets/stylesheets/initializers/_ress.scss */
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Remove the default button styling in all browsers */
+/* line 251, app/assets/stylesheets/initializers/_ress.scss */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+}
+
+/* Style select like a standard input */
+/* line 261, app/assets/stylesheets/initializers/_ress.scss */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+/* line 268, app/assets/stylesheets/initializers/_ress.scss */
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+/* line 273, app/assets/stylesheets/initializers/_ress.scss */
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+/* line 278, app/assets/stylesheets/initializers/_ress.scss */
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+}
+
+/* line 291, app/assets/stylesheets/initializers/_ress.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+/* line 298, app/assets/stylesheets/initializers/_ress.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+/* line 309, app/assets/stylesheets/initializers/_ress.scss */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+/* line 315, app/assets/stylesheets/initializers/_ress.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 319, app/assets/stylesheets/initializers/_ress.scss */
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */
+}
+
+/* line 324, app/assets/stylesheets/initializers/_ress.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  /* line 338, app/assets/stylesheets/initializers/_ress.scss */
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  /* line 342, app/assets/stylesheets/initializers/_ress.scss */
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+/* Specify the progress cursor of updating elements */
+/* line 349, app/assets/stylesheets/initializers/_ress.scss */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+/* line 354, app/assets/stylesheets/initializers/_ress.scss */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+/* line 359, app/assets/stylesheets/initializers/_ress.scss */
+[aria-disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Selection
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+/* line 369, app/assets/stylesheets/initializers/_ress.scss */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+/* line 376, app/assets/stylesheets/initializers/_ress.scss */
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+/* line 1, app/assets/stylesheets/base/_base.sass */
+body {
+  font-family: YakuHanJPs_Narrow, "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes bounceOut2 {
+  0% {
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  50%,
+85% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+/* line 21, app/assets/stylesheets/base/_base.sass */
+.animate__bounceOut2 {
+  animation-duration: 2s !important;
+  animation-name: bounceOut2;
+}
+
+/* line 1, app/assets/stylesheets/layouts/_l-container.sass */
+.l-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* line 1, app/assets/stylesheets/layouts/_l-content.sass */
+.l-content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 1, app/assets/stylesheets/layouts/_l-content.sass */
+  .l-content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 1, app/assets/stylesheets/layouts/_l-content.sass */
+  .l-content {
+    padding: 10vh 1rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    max-height: 100vh;
+    width: 100%;
+  }
+}
+
+/* line 1, app/assets/stylesheets/atoms/_a-copy-text.sass */
+textarea.a-copy-text {
+  font-size: 1.125rem;
+  color: #3b384c;
+  width: 100%;
+  height: auto;
+  padding: .5em .75em;
+  line-height: 1.5;
+  min-height: 8em;
+  border: dashed 2px #302f33;
+  background-color: white;
+}
+
+/* line 10, app/assets/stylesheets/atoms/_a-ex-button.sass */
+.a-ex-button {
+  text-align: center;
+  text-transform: none;
+  display: inline-flex;
+  border: solid 1px;
+  border-radius: .25rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease-out;
+  font-weight: 800;
+  color: #3b384c;
+  padding: 0 2em;
+  border-radius: .25em;
+  height: 2.75em;
+  transition: all .4s ease-out;
+  background-color: #fabd17;
+  background-image: linear-gradient(#fbc73b, #b77411);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffdf89 #d6a521 #945d0c;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0.125rem 0.5rem 0.125em, rgba(255, 255, 255, 0.25) 0 0 0.25rem 1px inset;
+  text-shadow: rgba(255, 255, 255, 0.7) 0 1px 2px;
+}
+
+/* line 15, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-ex-button.is-block {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* line 19, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-ex-button:focus {
+  outline: none;
+}
+
+/* line 21, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-ex-button:disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (min-width: 48em) {
+  /* line 25, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group .a-ex-button {
+    margin-right: -1px;
+  }
+  /* line 27, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group .a-ex-button:hover, .is-button-group .a-ex-button:active {
+    position: relative;
+  }
+  /* line 30, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group li:not(:first-child):not(:last-child) .a-ex-button {
+    border-radius: 0;
+  }
+  /* line 32, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group li:first-child .a-ex-button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  /* line 34, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group li:last-child .a-ex-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* line 36, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-ex-button i:first-child {
+  margin-right: .4em;
+}
+
+/* line 38, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-ex-button i:last-child {
+  margin-left: .4em;
+}
+
+/* line 40, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-ex-button i:first-child:last-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 19, app/assets/stylesheets/atoms/_a-ex-button.sass */
+  .a-ex-button.is-lg {
+    font-size: 1.6rem;
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 19, app/assets/stylesheets/atoms/_a-ex-button.sass */
+  .a-ex-button.is-lg {
+    font-size: 2rem;
+    min-width: 14em;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 26, app/assets/stylesheets/atoms/_a-ex-button.sass */
+  .a-ex-button.is-md {
+    font-size: 1.3333333333rem;
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 26, app/assets/stylesheets/atoms/_a-ex-button.sass */
+  .a-ex-button.is-md {
+    font-size: 1.6rem;
+    min-width: 14em;
+  }
+}
+
+/* line 33, app/assets/stylesheets/atoms/_a-ex-button.sass */
+.a-ex-button:hover {
+  color: #2d2d33;
+  border-color: #fbdf98 #eccf7e #c79953;
+  background-color: #fabd17;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 0 1rem 0.125em, rgba(255, 255, 255, 0.5) 0 0 0.5rem 1px inset;
+  text-shadow: rgba(255, 255, 255, 0.7) 0 1px 4px;
+}
+
+/* line 39, app/assets/stylesheets/atoms/_a-ex-button.sass */
+.a-ex-button:active {
+  color: #2d2d33;
+  border-color: #563508 #90620d #ffcd52;
+  background-image: linear-gradient(#b77411, #fbc73b);
+  background-color: #fabd17;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 2px 0px 0px, rgba(0, 0, 0, 0.5) 0 4px 8px inset, rgba(0, 0, 0, 0.2) 0 -4px 8px;
+  text-shadow: rgba(255, 255, 255, 0.7) 0 1px 4px;
+  color: #9a291f;
+}
+
+/* line 47, app/assets/stylesheets/atoms/_a-ex-button.sass */
+.a-ex-button.is-disabled {
+  color: #2d2d33;
+  border-color: #b9b9b9;
+  background-image: none;
+  background-color: #b9b9b9;
+  box-shadow: none;
+  text-shadow: rgba(255, 255, 255, 0.7) 0 1px 1px;
+  color: #888;
+  pointer-events: none;
+}
+
+/* line 56, app/assets/stylesheets/atoms/_a-ex-button.sass */
+.a-ex-button.is-danger {
+  background-color: #de493a;
+  background-image: linear-gradient(#fb5454, #9a2b12);
+  border-color: #f18381 #c55d53 #9a291f;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 2px;
+}
+
+/* line 62, app/assets/stylesheets/atoms/_a-ex-button.sass */
+.a-ex-button.is-danger:hover {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 4px;
+}
+
+/* line 1, app/assets/stylesheets/atoms/_a-form-label.sass */
+.a-form-label {
+  font-weight: 700;
+  display: block;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 1, app/assets/stylesheets/atoms/_a-form-label.sass */
+  .a-form-label {
+    font-size: 1.1428571429rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 1, app/assets/stylesheets/atoms/_a-form-label.sass */
+  .a-form-label {
+    font-size: 1.3333333333rem;
+  }
+}
+
+/* line 1, app/assets/stylesheets/atoms/_a-hr-border.sass */
+.a-hr-border {
+  background-color: #ccc;
+  height: 1px;
+  width: 100%;
+}
+
+/* line 1, app/assets/stylesheets/atoms/_a-icon-square.sass */
+.a-icon-square {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3b384c;
+  height: 100%;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: all .2s ease-out;
+}
+
+/* line 11, app/assets/stylesheets/atoms/_a-icon-square.sass */
+.a-icon-square:hover {
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+/* line 14, app/assets/stylesheets/atoms/_a-icon-square.sass */
+.a-icon-square:focus, .a-icon-square:active {
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+/* line 19, app/assets/stylesheets/atoms/_a-icon-square.sass */
+label.a-icon-square {
+  cursor: pointer;
+}
+
+/* line 22, app/assets/stylesheets/atoms/_a-icon-square.sass */
+.a-icon-square__icon {
+  text-align: center;
+  display: block;
+}
+
+/* line 25, app/assets/stylesheets/atoms/_a-icon-square.sass */
+.a-icon-square__label {
+  font-size: 0.385em;
+  line-height: 1.3;
+  margin-top: 0.5em;
+  margin-bottom: -0.83em;
+  text-align: center;
+  display: block;
+}
+
+/* line 2, app/assets/stylesheets/atoms/_a-text-input.sass */
+input::placeholder,
+textarea::placeholder {
+  color: #bbb;
+}
+
+/* line 5, app/assets/stylesheets/atoms/_a-text-input.sass */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #bbb;
+}
+
+/* line 8, app/assets/stylesheets/atoms/_a-text-input.sass */
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #bbb;
+}
+
+/* line 15, app/assets/stylesheets/atoms/_a-text-input.sass */
+.a-text-input {
+  background-color: white;
+  background-image: linear-gradient(white, #ccc);
+  color: #3b384c;
+  border-radius: 8px;
+  height: 2.5em;
+  width: 100%;
+  padding: 0 .5em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px inset, rgba(255, 255, 255, 0.3) 0 1px 2px;
+  font-weight: 800;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2a206d #2a1f71 #6f61c7;
+  transition: all .4s ease-out;
+}
+
+/* line 28, app/assets/stylesheets/atoms/_a-text-input.sass */
+.a-text-input:hover, .a-text-input:focus, .a-text-input:active {
+  border-color: #7568ca #6356b7 #a398e8;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px inset, rgba(255, 255, 255, 0.3) 0 1px 2px, rgba(255, 255, 255, 0.4) 0 0 16px;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 15, app/assets/stylesheets/atoms/_a-text-input.sass */
+  .a-text-input {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 15, app/assets/stylesheets/atoms/_a-text-input.sass */
+  .a-text-input {
+    font-size: 1.6rem;
+  }
+}
+
+/* line 38, app/assets/stylesheets/atoms/_a-text-input.sass */
+textarea.a-text-input {
+  height: auto;
+  padding: .25em .5em;
+  line-height: 1.5;
+  min-height: 8em;
+}
+
+/* line 1, app/assets/stylesheets/atoms/_a-text-link.sass */
+.a-text-link {
+  color: #c8c3e3;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+/* line 6, app/assets/stylesheets/atoms/_a-text-link.sass */
+.a-text-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* line 1, app/assets/stylesheets/atoms/_button.sass */
+.a-button {
+  text-align: center;
+  text-transform: none;
+  display: inline-flex;
+  border: solid 1px;
+  border-radius: .25rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease-out;
+}
+
+/* line 15, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-block {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* line 19, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button:focus {
+  outline: none;
+}
+
+/* line 21, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button:disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (min-width: 48em) {
+  /* line 25, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group .a-button {
+    margin-right: -1px;
+  }
+  /* line 27, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group .a-button:hover, .is-button-group .a-button:active {
+    position: relative;
+  }
+  /* line 30, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group li:not(:first-child):not(:last-child) .a-button {
+    border-radius: 0;
+  }
+  /* line 32, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group li:first-child .a-button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  /* line 34, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+  .is-button-group li:last-child .a-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* line 36, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button i:first-child {
+  margin-right: .4em;
+}
+
+/* line 38, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button i:last-child {
+  margin-left: .4em;
+}
+
+/* line 40, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button i:first-child:last-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 5, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-primary {
+  color: white;
+  border-color: #5e4fc7 #5646c4 #5243ba;
+  background-color: #604eda;
+  transition: all .2s ease-out;
+  background-image: linear-gradient(#6857dc, #5b4acf);
+}
+
+/* line 60, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-primary:hover, .a-button.is-primary:focus, .a-button.is-primary:active {
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.15) inset, 0 0 0 0.1875rem rgba(96, 78, 218, 0.25);
+  background-color: #4d3eae;
+  border-color: #5648b2 #4d3eae #493ba5;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-primary.is-disabled, .a-button.is-primary:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #5a49cd;
+}
+
+/* line 7, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-secondary {
+  color: #3b384c;
+  border-color: #bdc1c4;
+  background-color: #e7ebef;
+  transition: all .2s ease-out;
+  background-image: linear-gradient(#e8ecf0, #dbdfe3);
+}
+
+/* line 60, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-secondary:hover, .a-button.is-secondary:focus, .a-button.is-secondary:active {
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.15) inset, 0 0 0 0.1875rem rgba(231, 235, 239, 0.25);
+  background-color: #b9bcbf;
+  border-color: #b0b3b6;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-secondary.is-disabled, .a-button.is-secondary:disabled {
+  color: rgba(59, 56, 76, 0.4);
+  pointer-events: none;
+  border-color: #d9dde1;
+}
+
+/* line 9, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-info {
+  color: white;
+  border-color: #2197aa #1592a6 #148b9e;
+  background-color: #17a2b8;
+  transition: all .2s ease-out;
+  background-image: linear-gradient(#23a7bc, #169aaf);
+}
+
+/* line 60, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-info:hover, .a-button.is-info:focus, .a-button.is-info:active {
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.15) inset, 0 0 0 0.1875rem rgba(23, 162, 184, 0.25);
+  background-color: #128293;
+  border-color: #1e8898 #128293 #117c8c;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-info.is-disabled, .a-button.is-info:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #1698ad;
+}
+
+/* line 11, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-success {
+  color: white;
+  border-color: #2f9b48 #24963e #228f3b;
+  background-color: #28a745;
+  transition: all .2s ease-out;
+  background-image: linear-gradient(#33ab4e, #269f42);
+}
+
+/* line 60, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-success:hover, .a-button.is-success:focus, .a-button.is-success:active {
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.15) inset, 0 0 0 0.1875rem rgba(40, 167, 69, 0.25);
+  background-color: #208637;
+  border-color: #2b8c41 #208637 #1e7f34;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-success.is-disabled, .a-button.is-success:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #269d41;
+}
+
+/* line 13, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-warning {
+  color: #3b384c;
+  border-color: #e7b810 #e6b403 #dbab03;
+  background-color: #ffc803;
+  transition: all .2s ease-out;
+  background-image: linear-gradient(#ffcb10, #f2be03);
+}
+
+/* line 60, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-warning:hover, .a-button.is-warning:focus, .a-button.is-warning:active {
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.15) inset, 0 0 0 0.1875rem rgba(255, 200, 3, 0.25);
+  background-color: #cca002;
+  border-color: #cfa50f #cca002 #c29802;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-warning.is-disabled, .a-button.is-warning:disabled {
+  color: rgba(59, 56, 76, 0.4);
+  pointer-events: none;
+  border-color: #f0bc03;
+}
+
+/* line 15, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-danger {
+  color: white;
+  border-color: #c93a48 #c6303e #bc2e3b;
+  background-color: #dc3545;
+  transition: all .2s ease-out;
+  background-image: linear-gradient(#de3f4e, #d13242);
+}
+
+/* line 60, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-danger:hover, .a-button.is-danger:focus, .a-button.is-danger:active {
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.15) inset, 0 0 0 0.1875rem rgba(220, 53, 69, 0.25);
+  background-color: #b02a37;
+  border-color: #b43541 #b02a37 #a72834;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-danger.is-disabled, .a-button.is-danger:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #cf3241;
+}
+
+/* line 17, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-disabled {
+  color: #3b384c;
+  border-color: #cecece #cbcbcb #c1c1c1;
+  background-color: #e2e2e2;
+  transition: all .2s ease-out;
+  pointer-events: none;
+}
+
+/* line 67, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-disabled.is-disabled, .a-button.is-disabled:disabled {
+  color: rgba(59, 56, 76, 0.4);
+  pointer-events: none;
+  border-color: #d4d4d4;
+}
+
+/* line 22, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-primary {
+  color: #604eda;
+  border-color: #604eda;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-primary:focus, .a-button.is-border-primary:active {
+  box-shadow: 0 0 0 0.1875rem rgba(96, 78, 218, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-primary:hover, .a-button.is-border-primary:focus, .a-button.is-border-primary:active {
+  background-color: rgba(96, 78, 218, 0.1);
+  border-color: #3f2acb;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-primary.is-disabled, .a-button.is-border-primary:disabled {
+  color: rgba(96, 78, 218, 0.4);
+  pointer-events: none;
+  border-color: #5a49cd;
+}
+
+/* line 24, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-secondary {
+  color: #9494a0;
+  border-color: #9494a0;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-secondary:focus, .a-button.is-border-secondary:active {
+  box-shadow: 0 0 0 0.1875rem rgba(148, 148, 160, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-secondary:hover, .a-button.is-border-secondary:focus, .a-button.is-border-secondary:active {
+  background-color: rgba(148, 148, 160, 0.1);
+  border-color: #797988;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-secondary.is-disabled, .a-button.is-border-secondary:disabled {
+  color: rgba(148, 148, 160, 0.4);
+  pointer-events: none;
+  border-color: #8b8b96;
+}
+
+/* line 26, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-info {
+  color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-info:focus, .a-button.is-border-info:active {
+  box-shadow: 0 0 0 0.1875rem rgba(23, 162, 184, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-info:hover, .a-button.is-border-info:focus, .a-button.is-border-info:active {
+  background-color: rgba(23, 162, 184, 0.1);
+  border-color: #117a8b;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-info.is-disabled, .a-button.is-border-info:disabled {
+  color: rgba(23, 162, 184, 0.4);
+  pointer-events: none;
+  border-color: #1698ad;
+}
+
+/* line 28, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-success:focus, .a-button.is-border-success:active {
+  box-shadow: 0 0 0 0.1875rem rgba(40, 167, 69, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-success:hover, .a-button.is-border-success:focus, .a-button.is-border-success:active {
+  background-color: rgba(40, 167, 69, 0.1);
+  border-color: #1e7e34;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-success.is-disabled, .a-button.is-border-success:disabled {
+  color: rgba(40, 167, 69, 0.4);
+  pointer-events: none;
+  border-color: #269d41;
+}
+
+/* line 30, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-warning {
+  color: #ffc803;
+  border-color: #ffc803;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-warning:focus, .a-button.is-border-warning:active {
+  box-shadow: 0 0 0 0.1875rem rgba(255, 200, 3, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-warning:hover, .a-button.is-border-warning:focus, .a-button.is-border-warning:active {
+  background-color: rgba(255, 200, 3, 0.1);
+  border-color: #cfa200;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-warning.is-disabled, .a-button.is-border-warning:disabled {
+  color: rgba(255, 200, 3, 0.4);
+  pointer-events: none;
+  border-color: #f0bc03;
+}
+
+/* line 32, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-danger:focus, .a-button.is-border-danger:active {
+  box-shadow: 0 0 0 0.1875rem rgba(220, 53, 69, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-danger:hover, .a-button.is-border-danger:focus, .a-button.is-border-danger:active {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: #bd2130;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-danger.is-disabled, .a-button.is-border-danger:disabled {
+  color: rgba(220, 53, 69, 0.4);
+  pointer-events: none;
+  border-color: #cf3241;
+}
+
+/* line 34, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-border-disabled {
+  color: #e2e2e2;
+  border-color: #e2e2e2;
+  pointer-events: none;
+}
+
+/* line 76, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-disabled:focus, .a-button.is-border-disabled:active {
+  box-shadow: 0 0 0 0.1875rem rgba(226, 226, 226, 0.25);
+}
+
+/* line 79, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-disabled:hover, .a-button.is-border-disabled:focus, .a-button.is-border-disabled:active {
+  background-color: rgba(226, 226, 226, 0.1);
+  border-color: #c9c9c9;
+}
+
+/* line 85, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-border-disabled.is-disabled, .a-button.is-border-disabled:disabled {
+  color: rgba(226, 226, 226, 0.4);
+  pointer-events: none;
+  border-color: #d4d4d4;
+}
+
+/* line 39, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-primary {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: #6f62cd #5646c4 #3c3189;
+  background-color: #604eda;
+  box-shadow: #3d328c 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  background-image: linear-gradient(#7869e0, #5242b9);
+}
+
+/* line 103, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-primary:hover, .a-button.is-3d-primary:focus, .a-button.is-3d-primary:active {
+  background-color: #8071e1;
+  background-image: linear-gradient(#9386e6, #6d60bf);
+  border-color: #887dd3 #7366cb #484080;
+  box-shadow: #524890 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+}
+
+/* line 112, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-primary:active {
+  position: relative;
+  top: 0.09375em;
+  box-shadow: #524890 0 calc(0.125em / 2) 0 0, rgba(0, 0, 0, 0.4) 0 calc(0.125em / 2) 0.3125em;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-primary.is-disabled, .a-button.is-3d-primary:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #5a49cd;
+}
+
+/* line 41, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-secondary {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #3b384c;
+  border-color: #bdc1c4;
+  background-color: #e7ebef;
+  box-shadow: #949699 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  background-image: linear-gradient(#ebeef1, #c4c8cb);
+}
+
+/* line 103, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-secondary:hover, .a-button.is-3d-secondary:focus, .a-button.is-3d-secondary:active {
+  background-color: #eceff2;
+  background-image: linear-gradient(#eff1f4, #c9cbce);
+  border-color: #b0b3b6;
+  box-shadow: #97999b 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+}
+
+/* line 112, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-secondary:active {
+  position: relative;
+  top: 0.09375em;
+  box-shadow: #97999b 0 calc(0.125em / 2) 0 0, rgba(0, 0, 0, 0.4) 0 calc(0.125em / 2) 0.3125em;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-secondary.is-disabled, .a-button.is-3d-secondary:disabled {
+  color: rgba(59, 56, 76, 0.4);
+  pointer-events: none;
+  border-color: #d9dde1;
+}
+
+/* line 43, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-info {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: #38a2b3 #1592a6 #0e6674;
+  background-color: #17a2b8;
+  box-shadow: #0f6876 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  background-image: linear-gradient(#3ab0c3, #148a9c);
+}
+
+/* line 103, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-info:hover, .a-button.is-3d-info:focus, .a-button.is-3d-info:active {
+  background-color: #45b5c6;
+  background-image: linear-gradient(#61c0cf, #3b9aa8);
+  border-color: #5bb1be #3ea3b2 #276770;
+  box-shadow: #2c747f 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+}
+
+/* line 112, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-info:active {
+  position: relative;
+  top: 0.09375em;
+  box-shadow: #2c747f 0 calc(0.125em / 2) 0 0, rgba(0, 0, 0, 0.4) 0 calc(0.125em / 2) 0.3125em;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-info.is-disabled, .a-button.is-3d-info:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #1698ad;
+}
+
+/* line 45, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-success {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: #45a65b #24963e #19692b;
+  background-color: #28a745;
+  box-shadow: #1a6b2c 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  background-image: linear-gradient(#48b461, #228e3b);
+}
+
+/* line 103, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-success:hover, .a-button.is-3d-success:focus, .a-button.is-3d-success:active {
+  background-color: #53b96a;
+  background-image: linear-gradient(#6dc480, #479d5a);
+  border-color: #66b477 #4ba75f #2f693c;
+  box-shadow: #357644 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+}
+
+/* line 112, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-success:active {
+  position: relative;
+  top: 0.09375em;
+  box-shadow: #357644 0 calc(0.125em / 2) 0 0, rgba(0, 0, 0, 0.4) 0 calc(0.125em / 2) 0.3125em;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-success.is-disabled, .a-button.is-3d-success:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #269d41;
+}
+
+/* line 47, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-warning {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #3b384c;
+  border-color: #eabf29 #e6b403 #a17e02;
+  background-color: #ffc803;
+  box-shadow: #a38002 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  background-image: linear-gradient(#ffd029, #d9aa03);
+}
+
+/* line 103, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-warning:hover, .a-button.is-3d-warning:focus, .a-button.is-3d-warning:active {
+  background-color: #ffd335;
+  background-image: linear-gradient(#ffda53, #d9b32d);
+  border-color: #eac84f #e6be30 #91781e;
+  box-shadow: #a38722 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+}
+
+/* line 112, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-warning:active {
+  position: relative;
+  top: 0.09375em;
+  box-shadow: #a38722 0 calc(0.125em / 2) 0 0, rgba(0, 0, 0, 0.4) 0 calc(0.125em / 2) 0.3125em;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-warning.is-disabled, .a-button.is-3d-warning:disabled {
+  color: rgba(59, 56, 76, 0.4);
+  pointer-events: none;
+  border-color: #f0bc03;
+}
+
+/* line 49, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-danger {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: #cf4f5b #c6303e #8b212b;
+  background-color: #dc3545;
+  box-shadow: #8d222c 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  background-image: linear-gradient(#e15361, #bb2d3b);
+}
+
+/* line 103, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-danger:hover, .a-button.is-3d-danger:focus, .a-button.is-3d-danger:active {
+  background-color: #e35d6a;
+  background-image: linear-gradient(#e77580, #c14f5a);
+  border-color: #d46e77 #cc545f #81353c;
+  box-shadow: #913c44 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+}
+
+/* line 112, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-danger:active {
+  position: relative;
+  top: 0.09375em;
+  box-shadow: #913c44 0 calc(0.125em / 2) 0 0, rgba(0, 0, 0, 0.4) 0 calc(0.125em / 2) 0.3125em;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-danger.is-disabled, .a-button.is-3d-danger:disabled {
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  border-color: #cf3241;
+}
+
+/* line 51, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-3d-disabled {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #3b384c;
+  border-color: lightgray #cbcbcb #8e8e8e;
+  background-color: #e2e2e2;
+  box-shadow: #919191 0 0.125em 0 0, rgba(0, 0, 0, 0.4) 0 0.125em 0.3125em;
+  pointer-events: none;
+}
+
+/* line 116, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+.a-button.is-3d-disabled.is-disabled, .a-button.is-3d-disabled:disabled {
+  color: rgba(59, 56, 76, 0.4);
+  pointer-events: none;
+  border-color: #d4d4d4;
+}
+
+/* line 56, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-xs {
+  font-size: 0.8rem;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  min-height: 2em;
+  font-weight: 600;
+}
+
+/* line 129, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+body.is-ie11 .a-button.is-xs {
+  height: 2em;
+}
+
+/* line 59, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-sm {
+  font-size: 0.8888888889rem;
+  padding-left: 1.1111111111em;
+  padding-right: 1.1111111111em;
+  min-height: 2.5111111111em;
+  font-weight: 600;
+}
+
+/* line 129, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+body.is-ie11 .a-button.is-sm {
+  height: 2.5111111111em;
+}
+
+/* line 62, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-md {
+  font-size: 1rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  min-height: 2.75rem;
+  font-weight: 600;
+}
+
+/* line 129, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+body.is-ie11 .a-button.is-md {
+  height: 2.75rem;
+}
+
+/* line 65, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-lg {
+  font-size: 1.3333333333rem;
+  padding-left: 1.3333333333em;
+  padding-right: 1.3333333333em;
+  min-height: 3em;
+  font-weight: 600;
+}
+
+/* line 129, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+body.is-ie11 .a-button.is-lg {
+  height: 3em;
+}
+
+/* line 68, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-xl {
+  font-size: 1.6rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  min-height: 2.96em;
+  font-weight: 700;
+}
+
+/* line 129, app/assets/stylesheets/config/mixins/accessories/_button.sass */
+body.is-ie11 .a-button.is-xl {
+  height: 2.96em;
+}
+
+/* line 72, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-icon {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/* line 74, app/assets/stylesheets/atoms/_button.sass */
+.a-button.is-icon i {
+  font-size: 1.125em;
+}
+
+/* line 1, app/assets/stylesheets/atoms/_table.sass */
+.a-basic-table {
+  min-width: 100%;
+}
+
+/* line 3, app/assets/stylesheets/atoms/_table.sass */
+.a-basic-table th,
+.a-basic-table td {
+  padding: .375em .75em;
+  border: solid 1px #ccc;
+  line-height: 1.45;
+}
+
+/* line 8, app/assets/stylesheets/atoms/_table.sass */
+.a-basic-table th {
+  font-weight: 600;
+  text-align: center;
+}
+
+/* line 11, app/assets/stylesheets/atoms/_table.sass */
+.a-basic-table thead {
+  background-color: #e2e6ea;
+}
+
+/* line 13, app/assets/stylesheets/atoms/_table.sass */
+.a-basic-table thead th,
+.a-basic-table thead td {
+  border-color: #b1b6bb;
+}
+
+/* line 1, app/assets/stylesheets/molecules/_m-horizontal-buttons.sass */
+.m-horizontal-buttons {
+  height: 100%;
+}
+
+/* line 4, app/assets/stylesheets/molecules/_m-horizontal-buttons.sass */
+.m-horizontal-buttons__items {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-left: calc(0.5rem / -2);
+  margin-right: calc(0.5rem / -2);
+}
+
+/* line 15, app/assets/stylesheets/config/mixins/_flex-grid.sass */
+.m-horizontal-buttons__items > * {
+  padding-left: calc(0.5rem / 2);
+  padding-right: calc(0.5rem / 2);
+}
+
+/* line 8, app/assets/stylesheets/molecules/_m-horizontal-buttons.sass */
+.m-horizontal-buttons__item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+@media (min-width: 48em) {
+  /* line 8, app/assets/stylesheets/molecules/_m-horizontal-buttons.sass */
+  .m-horizontal-buttons__item {
+    max-width: 20rem;
+  }
+}
+
+/* line 1, app/assets/stylesheets/molecules/_m-vertical-icon-blocks.sass */
+.m-vertical-icon-blocks {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* line 5, app/assets/stylesheets/molecules/_m-vertical-icon-blocks.sass */
+.m-vertical-icon-blocks__item {
+  position: relative;
+}
+
+/* line 7, app/assets/stylesheets/molecules/_m-vertical-icon-blocks.sass */
+.m-vertical-icon-blocks__item .a-count-badge {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_form.sass */
+.form {
+  width: 48rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* line 6, app/assets/stylesheets/organisms/_form.sass */
+.form__header {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 6, app/assets/stylesheets/organisms/_form.sass */
+  .form__header {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 6, app/assets/stylesheets/organisms/_form.sass */
+  .form__header {
+    font-size: 2.75rem;
+  }
+}
+
+/* line 13, app/assets/stylesheets/organisms/_form.sass */
+.form__title {
+  text-align: center;
+  line-height: 1.4;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 -2px 1px;
+}
+
+/* line 18, app/assets/stylesheets/organisms/_form.sass */
+.form__help {
+  margin-top: .5em;
+  line-height: 1.4;
+  color: #b9b1ea;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 18, app/assets/stylesheets/organisms/_form.sass */
+  .form__help {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 18, app/assets/stylesheets/organisms/_form.sass */
+  .form__help {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 26, app/assets/stylesheets/organisms/_form.sass */
+  .form__help.is-sm {
+    font-size: .875rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 26, app/assets/stylesheets/organisms/_form.sass */
+  .form__help.is-sm {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 32, app/assets/stylesheets/organisms/_form.sass */
+  .form__description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 32, app/assets/stylesheets/organisms/_form.sass */
+  .form__description {
+    font-size: 1.25rem;
+  }
+}
+
+/* line 37, app/assets/stylesheets/organisms/_form.sass */
+.form__description p {
+  line-height: 1.5;
+}
+
+/* line 41, app/assets/stylesheets/organisms/_form.sass */
+.form__description + .form__items {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 43, app/assets/stylesheets/organisms/_form.sass */
+  .form__header + .form__items {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 43, app/assets/stylesheets/organisms/_form.sass */
+  .form__header + .form__items {
+    margin-top: 2rem;
+  }
+}
+
+/* line 50, app/assets/stylesheets/organisms/_form.sass */
+.form__item .a-form-label {
+  margin-bottom: .5em;
+}
+
+/* line 52, app/assets/stylesheets/organisms/_form.sass */
+.form__item + .form__item {
+  margin-top: 2rem;
+}
+
+/* line 56, app/assets/stylesheets/organisms/_form.sass */
+.form__input-container .form__text {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 60, app/assets/stylesheets/organisms/_form.sass */
+  .form__input-container .form__text {
+    font-size: 1rem;
+    display: block;
+    margin-top: .25em;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 55, app/assets/stylesheets/organisms/_form.sass */
+  .form__input-container {
+    display: flex;
+    align-items: flex-end;
+  }
+  /* line 67, app/assets/stylesheets/organisms/_form.sass */
+  .form__input-container .form__text {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-left: .25em;
+  }
+}
+
+/* line 72, app/assets/stylesheets/organisms/_form.sass */
+.form__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 77, app/assets/stylesheets/organisms/_form.sass */
+.form__items + .form__actions {
+  margin-top: 2rem;
+}
+
+/* line 79, app/assets/stylesheets/organisms/_form.sass */
+.form__actions .a-button:not(:first-child) {
+  margin-top: .75em;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 82, app/assets/stylesheets/organisms/_form.sass */
+  .form__action {
+    width: 100%;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 86, app/assets/stylesheets/organisms/_form.sass */
+  .form__nav {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 86, app/assets/stylesheets/organisms/_form.sass */
+  .form__nav {
+    font-size: 1.125rem;
+    margin-left: -.75em;
+    margin-right: -.75em;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* line 95, app/assets/stylesheets/organisms/_form.sass */
+.form__actions + .form__nav {
+  margin-top: 1.5em;
+}
+
+/* line 98, app/assets/stylesheets/organisms/_form.sass */
+.form__nav-link {
+  display: block;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 98, app/assets/stylesheets/organisms/_form.sass */
+  .form__nav-link {
+    text-align: center;
+  }
+  /* line 102, app/assets/stylesheets/organisms/_form.sass */
+  .form__nav-link + .form__nav-link {
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 98, app/assets/stylesheets/organisms/_form.sass */
+  .form__nav-link {
+    padding: 0 .75em;
+  }
+}
+
+/* line 3, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header {
+  height: 3.5rem;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/* line 7, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header .l-container {
+  height: inherit;
+}
+
+/* line 9, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header .m-horizontal-icon-blocks {
+  margin-right: -1.5rem;
+}
+
+/* line 12, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__inner {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+}
+
+/* line 17, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__start {
+  display: flex;
+  align-items: center;
+}
+
+/* line 21, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__page-links {
+  margin-left: 1.25rem;
+  font-size: .875rem;
+}
+
+/* line 24, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__page-links .m-inline-list__items {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+/* line 8, app/assets/stylesheets/config/mixins/_flex-grid.sass */
+.o-basic-header__page-links .m-inline-list__items > * {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+/* line 26, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__page-links .a-pill-link {
+  color: inherit;
+}
+
+/* line 28, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__page-links .a-pill-link:hover {
+  background-color: #4638a0;
+  color: white;
+}
+
+/* line 32, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links,
+.o-basic-header__auth-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* line 40, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links .m-horizontal-icon-blocks,
+.o-basic-header__auth-links .m-horizontal-icon-blocks {
+  font-size: 1.375rem;
+  background-color: white;
+}
+
+/* line 43, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links .m-horizontal-icon-blocks,
+.o-basic-header__block-links .m-horizontal-icon-blocks__items,
+.o-basic-header__block-links .m-horizontal-icon-blocks__item,
+.o-basic-header__auth-links .m-horizontal-icon-blocks,
+.o-basic-header__auth-links .m-horizontal-icon-blocks__items,
+.o-basic-header__auth-links .m-horizontal-icon-blocks__item {
+  height: inherit;
+}
+
+/* line 47, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links .m-horizontal-icon-blocks__item,
+.o-basic-header__auth-links .m-horizontal-icon-blocks__item {
+  width: 3.75rem;
+}
+
+/* line 49, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links .a-icon-square,
+.o-basic-header__auth-links .a-icon-square {
+  background-color: white;
+}
+
+/* line 51, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links .a-icon-square:hover,
+.o-basic-header__auth-links .a-icon-square:hover {
+  background-color: #e0e0e0;
+}
+
+/* line 53, app/assets/stylesheets/organisms/_header.sass */
+.o-basic-header__block-links .m-horizontal-icon-blocks__item .a-icon-square,
+.o-basic-header__auth-links .m-horizontal-icon-blocks__item .a-icon-square {
+  border-left: solid 1px #ccc;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_home.sass */
+.home__title {
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 1, app/assets/stylesheets/organisms/_home.sass */
+  .home__title {
+    font-size: 2.5rem;
+  }
+  /* line 7, app/assets/stylesheets/organisms/_home.sass */
+  .home__title br {
+    display: block;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 1, app/assets/stylesheets/organisms/_home.sass */
+  .home__title {
+    font-size: 5rem;
+  }
+  /* line 11, app/assets/stylesheets/organisms/_home.sass */
+  .home__title br {
+    display: none;
+  }
+}
+
+/* line 14, app/assets/stylesheets/organisms/_home.sass */
+.home__sub-title {
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 14, app/assets/stylesheets/organisms/_home.sass */
+  .home__sub-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 14, app/assets/stylesheets/organisms/_home.sass */
+  .home__sub-title {
+    font-size: 2.25rem;
+  }
+}
+
+/* line 22, app/assets/stylesheets/organisms/_home.sass */
+.home__title + .home__sub-title {
+  margin-top: 1.25em;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 24, app/assets/stylesheets/organisms/_home.sass */
+  .home__sub-title .is-hidden-md-up {
+    display: block;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 24, app/assets/stylesheets/organisms/_home.sass */
+  .home__sub-title .is-hidden-md-up {
+    display: none;
+  }
+}
+
+/* line 30, app/assets/stylesheets/organisms/_home.sass */
+.home__action {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 33, app/assets/stylesheets/organisms/_home.sass */
+  .home__hgroup + .home__action {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 33, app/assets/stylesheets/organisms/_home.sass */
+  .home__hgroup + .home__action {
+    margin-top: 3rem;
+  }
+}
+
+/* line 39, app/assets/stylesheets/organisms/_home.sass */
+.home__nav {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 39, app/assets/stylesheets/organisms/_home.sass */
+  .home__nav {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 39, app/assets/stylesheets/organisms/_home.sass */
+  .home__nav {
+    font-size: 1.25rem;
+  }
+}
+
+/* line 46, app/assets/stylesheets/organisms/_home.sass */
+.home__action + .home__nav {
+  margin-top: 1.5rem;
+}
+
+/* line 49, app/assets/stylesheets/organisms/_home.sass */
+.home__nav-link {
+  display: block;
+  padding: 0 .75em;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_o-admin-content.sass */
+.o-admin-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* line 4, app/assets/stylesheets/organisms/_o-admin-content.sass */
+.o-admin-content__header {
+  margin-bottom: 1.5rem;
+}
+
+/* line 7, app/assets/stylesheets/organisms/_o-admin-content.sass */
+.o-admin-content__title {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-weight: 600;
+}
+
+/* line 11, app/assets/stylesheets/organisms/_o-admin-content.sass */
+.o-admin-content__row:not(:first-child) {
+  margin-top: 1rem;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_o-basic-page-header.sass */
+.o-basic-page-header {
+  background-color: white;
+  height: 5rem;
+}
+
+/* line 4, app/assets/stylesheets/organisms/_o-basic-page-header.sass */
+.o-basic-page-header .l-container {
+  height: inherit;
+}
+
+/* line 7, app/assets/stylesheets/organisms/_o-basic-page-header.sass */
+.o-basic-page-header__inner {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+}
+
+/* line 12, app/assets/stylesheets/organisms/_o-basic-page-header.sass */
+.o-basic-page-header__start {
+  display: flex;
+  align-items: center;
+}
+
+/* line 16, app/assets/stylesheets/organisms/_o-basic-page-header.sass */
+.o-basic-page-header__title {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  font-weight: 600;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_o-flash.sass */
+.o-flash {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  background-image: url(/assets/flash-0037e505c8703913c3480fe798415258c6fbf08798d56d6837e420950765257a.jpg);
+  background-size: cover;
+  background-position: center;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 1, app/assets/stylesheets/organisms/_o-flash.sass */
+  .o-flash {
+    font-size: 1.5rem;
+    padding: 2rem 2rem 10rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 1, app/assets/stylesheets/organisms/_o-flash.sass */
+  .o-flash {
+    font-size: 4rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* line 27, app/assets/stylesheets/organisms/_o-flash.sass */
+.o-flash.is-hidden {
+  display: none;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_o-pagination.sass */
+.o-pagination__items {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: calc(0.5em / -2);
+  margin-right: calc(0.5em / -2);
+  margin-bottom: calc(0.5em * -1);
+}
+
+/* line 15, app/assets/stylesheets/config/mixins/_flex-grid.sass */
+.o-pagination__items > * {
+  padding-left: calc(0.5em / 2);
+  padding-right: calc(0.5em / 2);
+  margin-bottom: 0.5em;
+}
+
+/* line 4, app/assets/stylesheets/organisms/_o-pagination.sass */
+.o-pagination__item-link {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f7;
+  color: #9494a0;
+  border-radius: .1875rem;
+  border: solid 1px #ccc;
+  transition: all .2s ease-out;
+}
+
+/* line 3, app/assets/stylesheets/config/mixins/accessories/_block-hover.sass */
+.o-pagination__item-link:hover {
+  border-color: #604eda;
+  box-shadow: rgba(96, 78, 218, 0.2) 0 0 0 2px;
+}
+
+/* line 14, app/assets/stylesheets/organisms/_o-pagination.sass */
+.o-pagination__item-link:hover {
+  background-color: white;
+  color: #604eda;
+}
+
+/* line 17, app/assets/stylesheets/organisms/_o-pagination.sass */
+.o-pagination__item-link.is-active {
+  background-color: #4638a0;
+  color: white;
+  border-color: #4638a0;
+  pointer-events: none;
+}
+
+/* line 1, app/assets/stylesheets/organisms/_topics.sass */
+.tns-ovh {
+  overflow: auto !important;
+}
+
+/* line 4, app/assets/stylesheets/organisms/_topics.sass */
+.topics__item {
+  min-height: 100vh;
+}
+
+/* line 7, app/assets/stylesheets/organisms/_topics.sass */
+.topics__item-inner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  line-height: 1.4;
+  font-weight: 600;
+  overflow: auto;
+  position: fixed;
+}
+
+@media (min-width: 20em) and (max-width: 61.24em) {
+  /* line 7, app/assets/stylesheets/organisms/_topics.sass */
+  .topics__item-inner {
+    font-size: 2.25rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 61.25em) {
+  /* line 7, app/assets/stylesheets/organisms/_topics.sass */
+  .topics__item-inner {
+    font-size: 3.75vw;
+    padding: 1rem 4rem 8rem;
+  }
+}
+
+/* line 25, app/assets/stylesheets/organisms/_topics.sass */
+.topics__item-to {
+  font-size: .875em;
+  margin-bottom: .5em;
+}
+
+/* line 29, app/assets/stylesheets/organisms/_topics.sass */
+.tns-nav {
+  display: none;
+}
+
+/* line 32, app/assets/stylesheets/organisms/_topics.sass */
+.topics__link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* line 39, app/assets/stylesheets/organisms/_topics.sass */
+.tns-controls {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* line 47, app/assets/stylesheets/organisms/_topics.sass */
+.tns-controls button {
+  outline: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* line 3, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin {
+  background-color: #eaeaea;
+  padding-left: 5rem;
+}
+
+/* line 8, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__start .l-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* line 10, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__start .a-basic-table {
+  background-color: white;
+}
+
+/* line 13, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__end {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+}
+
+/* line 19, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__end .o-application-global-nav {
+  background-color: #4638a0;
+  font-size: 1.625rem;
+  min-height: 100vh;
+}
+
+/* line 23, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__end .m-vertical-icon-blocks__item {
+  height: 4.125rem;
+}
+
+/* line 25, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__end .a-icon-square {
+  color: white;
+  background-color: #4638a0;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+/* line 29, app/assets/stylesheets/templates/_t-admin.sass */
+.t-admin__end .a-icon-square:hover {
+  background-color: #3e318d;
+}
+
+/* line 1, app/assets/stylesheets/templates/_t-application.sass */
+.t-application {
+  overflow: hidden;
+  background-color: #4638a0;
+  background-image: linear-gradient(#5548af, #2c226f);
+  color: white;
+}
+
+/*# sourceMappingURL=application.css-bd4624a299f9a9da65da1591071cc933351849833213edd20f74d85c7a88b17a.map */
