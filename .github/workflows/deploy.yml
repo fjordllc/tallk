@@ -33,8 +33,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 153.127.41.49 >> ~/.ssh/known_hosts
 
+      - name: Create secrets file
+        run: |
+          echo "KAMAL_REGISTRY_PASSWORD=${{ secrets.KAMAL_REGISTRY_PASSWORD }}" > .kamal/secrets
+          echo "RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}" >> .kamal/secrets
+
       - name: Deploy with Kamal
-        env:
-          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-          KAMAL_REGISTRY_PASSWORD: ${{ secrets.KAMAL_REGISTRY_PASSWORD }}
         run: bin/kamal deploy
