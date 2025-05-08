@@ -34,7 +34,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "Host 153.127.41.49" > ~/.ssh/config
           echo "  StrictHostKeyChecking no" >> ~/.ssh/config
-          echo "  UserKnownHostsFile=/dev/null" >> ~/.ssh/config
 
       - name: Create secrets file
         run: |
