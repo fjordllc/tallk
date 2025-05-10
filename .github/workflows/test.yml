@@ -23,9 +23,7 @@ jobs:
       uses: browser-actions/setup-chrome@latest
     
     - name: Set up Database
-      run: |
-        bin/rails db:create
-        bin/rails db:schema:load
+      run: bin/rails db:prepare
     
     - name: Run tests
       run: bin/rails test:all
