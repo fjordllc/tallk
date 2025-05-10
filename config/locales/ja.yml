@@ -7,3 +7,12 @@ ja:
       topic:
         create: "登録"
         update: "変更"
+  flash:
+    topics:
+      create: "トピックを作成しました。"
+    rooms:
+      create: "質問収集箱完成！！"
+      update: "質問収集箱更新完了！！"
+      destroy:
+        success: "ルームを削除しました"
+        failure: "ルームの削除に失敗しました"

@@ -1,9 +1,11 @@
-require:
+plugins:
+  - rubocop-capybara
   - rubocop-performance
   - rubocop-rails
   - rubocop-minitest
 
 AllCops:
+  TargetRubyVersion: 3.4
   Exclude:
     - '**/templates/**/*'
     - '**/vendor/**/*'
@@ -13,6 +15,10 @@ AllCops:
     - 'db/schema.rb'
     - 'storage/**/*'
     - 'tmp/**/*'
+    - 'bin/**/*'
+    - config.ru
+
+  NewCops: enable
 
 Performance:
   Exclude:
@@ -28,6 +34,8 @@ Layout/LineLength:
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false

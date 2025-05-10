@@ -14,7 +14,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to @room, notice: '質問収集箱完成！！'
+      redirect_to @room, notice: t('flash.rooms.create')
     else
       render :new
     end
@@ -22,7 +22,7 @@ class RoomsController < ApplicationController
 
   def update
     if @room.update(room_params)
-      redirect_to @room, notice: '質問収集箱更新完了！！'
+      redirect_to @room, notice: t('flash.rooms.update')
     else
       render :edit
     end
@@ -35,6 +35,6 @@ class RoomsController < ApplicationController
   end
 
   def room_params
-    params.require(:room).permit(:name, :password)
+    params.expect(room: %i[name password])
   end
 end

@@ -8,9 +8,9 @@ class Admin::RoomsController < AdminController
   def destroy
     @room = Room.find(params[:id])
     if @room.destroy
-      redirect_to admin_rooms_path, notice: 'ルームを削除しました'
+      redirect_to admin_rooms_path, notice: t('flash.rooms.destroy.success')
     else
-      redirect_to admin_rooms_path, alert: 'ルームの削除に失敗しました'
+      redirect_to admin_rooms_path, alert: t('flash.rooms.destroy.failure')
     end
   end
 end

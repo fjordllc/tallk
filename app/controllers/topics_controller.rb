@@ -7,12 +7,12 @@ class TopicsController < ApplicationController
     @topics = @room.topics.shuffle
   end
 
-  def new
-    @topic = @room.topics.build
+  def show
+    @topic = @room.topics.sample
   end
 
-  def show
-    @topic = @room.topics.sample(1)
+  def new
+    @topic = @room.topics.build
   end
 
   def create
@@ -20,7 +20,7 @@ class TopicsController < ApplicationController
     @topic.room = @room
 
     if @topic.save
-      redirect_to @room, notice: 'トピックを作成しました。'
+      redirect_to @room, notice: t('flash.topics.create')
     else
       render :new
     end
@@ -33,6 +33,6 @@ class TopicsController < ApplicationController
   end
 
   def topic_params
-    params.require(:topic).permit(:name, :who)
+    params.expect(topic: %i[name who])
   end
 end

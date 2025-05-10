@@ -1,7 +1,7 @@
-room_1:
+room1:
   name: 2020年02月10日のフィヨルドミートアップ
   password_digest: <%= BCrypt::Password.create('testtest') %>
 
-room_2:
+room2:
   name: 2020年03月10日のフィヨルドミートアップ
   password_digest: <%= BCrypt::Password.create('testtest') %>
