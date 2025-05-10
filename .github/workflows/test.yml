@@ -1,4 +1,4 @@
-name: Rails Tests
+name: Rails Tests and Lint
 
 on:
   push:
@@ -24,6 +24,9 @@ jobs:
     
     - name: Set up Database
       run: bin/rails db:prepare
+    
+    - name: Run Rubocop
+      run: bundle exec rubocop
     
     - name: Run tests
       run: bin/rails test:all
