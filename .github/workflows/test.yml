@@ -25,8 +25,8 @@ jobs:
     
     - name: Set up Database
       run: |
-        rails db:create
-        rails db:schema:load
+        bin/rails db:create
+        bin/rails db:schema:load
     
     - name: Run tests
-      run: rails test:all
+      run: bin/rails test:all
