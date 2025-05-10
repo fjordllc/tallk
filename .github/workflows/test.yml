@@ -2,7 +2,6 @@ name: Rails Tests
 
 on:
   push:
-    # No branch specified - runs on all branches
 
 jobs:
   test:
