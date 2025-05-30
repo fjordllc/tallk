@@ -68,6 +68,7 @@ group :test do
 end
 
 # Project specific gems
+gem 'fixture_seed'
 gem 'kaminari'
 gem 'meta-tags'
 gem 'rails-i18n', '~> 8.0.0'
