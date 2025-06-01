@@ -1,11 +1,9 @@
 room1:
   id: 1
   name: 一般
-  password: password
   password_digest: <%= BCrypt::Password.create('password') %>
 
 room2:
   id: 2
   name: お知らせ
-  password: password
   password_digest: <%= BCrypt::Password.create('password') %>
